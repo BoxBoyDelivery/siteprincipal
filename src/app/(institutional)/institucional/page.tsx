@@ -1,11 +1,15 @@
 import type { JSX } from 'react'
 
-const InstitucionalPage = (): JSX.Element => {
-  return (
-    <div>
-      <h1>InstitucionalPage</h1>
-    </div>
-  )
+import type { Metadata } from 'next'
+
+import { InstitucionalPage } from '@/modules/institutional/InstitucionalPage'
+
+export const metadata: Metadata = {
+  title: 'Institucional',
+  description:
+    'Políticas de privacidade, cookies, termos de uso e informações jurídicas da Box Delivery S.A.',
 }
 
-export default InstitucionalPage
+const InstitucionalRoute = (): JSX.Element => <InstitucionalPage />
+
+export default InstitucionalRoute
