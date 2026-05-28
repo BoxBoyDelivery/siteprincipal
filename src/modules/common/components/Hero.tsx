@@ -38,8 +38,8 @@ const Hero = (): JSX.Element => {
             </h1>
 
             <p className="mt-6 max-w-140 text-[17px] leading-relaxed text-white/70 md:text-[18px]">
-              Entregas inteligentes, despacho automático e monitoramento em tempo real para sua
-              operação. Construído para escalar com sua marca.
+              Entregas inteligentes, despacho automático e monitoramento em tempo real é o que
+              entregamos para a sua operação. Construído para escalar com sua marca.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

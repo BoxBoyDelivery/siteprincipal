@@ -2,6 +2,7 @@
 
 import type { JSX } from 'react'
 
+import { Benefits } from '@/modules/common/components/Benefits'
 import { useReveal } from '@/modules/common/hooks/useReveal'
 import { Features } from './components/Features'
 import { Footer } from './components/Footer'
@@ -23,6 +24,7 @@ const LandingPage = (): JSX.Element => {
       <Showcase />
       <Pricing />
       <LeadForm />
+      <Benefits />
       <Footer />
     </main>
   )

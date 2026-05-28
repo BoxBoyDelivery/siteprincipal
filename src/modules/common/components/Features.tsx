@@ -16,7 +16,7 @@ const Features = (): JSX.Element => {
             style={{ fontSize: 'clamp(2rem, 4.4vw, 3.4rem)' }}
           >
             Tudo o que sua operação precisa — em <span className="amber-text">uma única</span>{' '}
-            plataforma.
+            parceria.
           </h2>
           <p className="text-muted mt-5 max-w-160 text-[17px] leading-relaxed">
             Seis recursos núcleo que substituem planilhas, grupos de WhatsApp e operadores

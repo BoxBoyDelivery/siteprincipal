@@ -2,6 +2,8 @@
 
 import type { JSX } from 'react'
 
+import { useRouter } from 'next/navigation'
+
 import { useScrolled } from '@/modules/common/hooks/useScrolled'
 import { ArrowIcon, LogoIcon } from '@/modules/common/icons'
 import { scrollToId } from '@/modules/common/utils/form'
@@ -14,6 +16,12 @@ const NAV_ITEMS: Array<{ id: string; label: string }> = [
 ]
 
 const Header = (): JSX.Element => {
+  const router = useRouter()
+
+  const handleNavigateInstitutionalPage = (): void => {
+    router.push('/institutional')
+  }
+
   const scrolled = useScrolled(8)
   return (
     <header
@@ -43,8 +51,9 @@ const Header = (): JSX.Element => {
           <button
             type="button"
             className="hidden h-10 items-center rounded-xl border border-white/15 px-4 text-sm text-white/90 transition hover:border-white/35 hover:bg-white/5 md:inline-flex"
+            onClick={handleNavigateInstitutionalPage}
           >
-            Acessar sistema
+            Institucional
           </button>
           <button
             type="button"

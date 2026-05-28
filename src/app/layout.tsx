@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | BoxBoy',
   },
   icons: {
-    icon: '/assets/boxboy.ico',
+    icon: '/assets/boxboy-logo.png',
   },
   description:
     'A BoxBoy conecta lojistas e entregadores para entregas instant delivery, same-day e next-day em todo a cidade do Rio de Janeiro. Mais de 1 milhão de entregas ao mês.',

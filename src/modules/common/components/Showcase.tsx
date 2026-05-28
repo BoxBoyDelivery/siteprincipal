@@ -30,12 +30,12 @@ const Showcase = (): JSX.Element => {
             className="font-display mt-3 leading-[1.02] font-bold tracking-tight"
             style={{ fontSize: 'clamp(2rem, 4.4vw, 3.4rem)' }}
           >
-            Controle total da sua operação,
+            Controlamos toda a nossa operação,
             <br />
             em <span className="amber-text">tempo real</span>.
           </h2>
           <p className="mt-6 max-w-130 text-[17px] leading-relaxed text-white/70">
-            Visualize cada pedido, cada motoboy e cada rota da sua operação no Rio de Janeiro.
+            Visualizando cada pedido, cada motoboy e cada rota da sua operação no Rio de Janeiro.
             Eventos em segundos, não em planilhas. Decisões com dado, não com achismo.
           </p>
           <ul className="mt-8 space-y-3.5">
