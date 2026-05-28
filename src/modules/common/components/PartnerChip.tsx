@@ -10,7 +10,7 @@ const PartnerChip = ({ slot }: PartnerChipProps): JSX.Element => {
   return (
     <div
       data-partner-slot={slot.id}
-      className="border-line flex h-[72px] w-[200px] shrink-0 items-center justify-center rounded-2xl border bg-white px-6 select-none"
+      className="border-line flex h-18 w-50 shrink-0 items-center justify-center rounded-2xl border bg-white px-6 select-none"
       title={`<${slot.id}/>`}
     >
       <div className="flex flex-col items-center gap-1">

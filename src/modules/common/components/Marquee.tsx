@@ -8,7 +8,7 @@ const Marquee = (): JSX.Element => {
 
   return (
     <section id="parceiros" className="bg-paper border-line border-y py-14 md:py-20">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="reveal mb-8 flex items-end justify-between md:mb-10">
           <div>
             <div className="text-muted font-mono text-[11px] tracking-[0.22em] uppercase">

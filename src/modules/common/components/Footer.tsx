@@ -46,7 +46,7 @@ const SOCIAL: Array<{ Icon: IconComponent; label: string }> = [
 const Footer = (): JSX.Element => {
   return (
     <footer id="contato" className="bg-ink-deep text-white">
-      <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12">
           <div>
             <a href="#top" className="flex items-center gap-2.5">

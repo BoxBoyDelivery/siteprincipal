@@ -11,7 +11,7 @@ interface FeatureCardProps {
 const FeatureCard = ({ feature: f }: FeatureCardProps): JSX.Element => {
   return (
     <article className="reveal fcard border-line flex flex-col rounded-3xl border bg-white p-5 md:p-6">
-      <div className="fviz relative h-[140px] rounded-2xl md:h-[150px]">
+      <div className="fviz relative h-35 rounded-2xl md:h-37.5">
         <div className="fviz-grid" />
         <div className="absolute top-3 left-3 flex items-center gap-2">
           <span className="amber-bg text-ink shadow-amber-soft grid h-7 w-7 place-items-center rounded-lg">
@@ -27,7 +27,7 @@ const FeatureCard = ({ feature: f }: FeatureCardProps): JSX.Element => {
             {f.stat}
           </span>
         </div>
-        <div className="absolute inset-x-2 bottom-1 h-[78px] md:h-[80px]">
+        <div className="absolute inset-x-2 bottom-1 h-19.5 md:h-20">
           <f.Viz />
         </div>
       </div>

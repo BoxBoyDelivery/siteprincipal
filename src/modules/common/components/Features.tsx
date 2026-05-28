@@ -6,7 +6,7 @@ import { FeatureCard } from './FeatureCard'
 const Features = (): JSX.Element => {
   return (
     <section id="plataforma" className="bg-paper-alt py-20 md:py-28">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="reveal max-w-3xl">
           <div className="text-muted font-mono text-[11px] tracking-[0.22em] uppercase">
             Plataforma
@@ -18,7 +18,7 @@ const Features = (): JSX.Element => {
             Tudo o que sua operação precisa — em <span className="amber-text">uma única</span>{' '}
             plataforma.
           </h2>
-          <p className="text-muted mt-5 max-w-[640px] text-[17px] leading-relaxed">
+          <p className="text-muted mt-5 max-w-160 text-[17px] leading-relaxed">
             Seis recursos núcleo que substituem planilhas, grupos de WhatsApp e operadores
             improvisados.
           </p>

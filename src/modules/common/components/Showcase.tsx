@@ -15,10 +15,10 @@ const Showcase = (): JSX.Element => {
     <section className="bg-ink relative overflow-hidden py-20 text-white md:py-28">
       <div className="grid-dots absolute inset-0 opacity-60" />
       <div
-        className="absolute -bottom-40 -left-40 h-[600px] w-[600px] rounded-full opacity-25 blur-3xl"
+        className="absolute -bottom-40 -left-40 h-150 w-150 rounded-full opacity-25 blur-3xl"
         style={{ background: 'radial-gradient(closest-side, #FFBD59, transparent 70%)' }}
       />
-      <div className="relative mx-auto grid max-w-[1280px] items-center gap-14 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
         <div className="reveal order-2 lg:order-1">
           <DashboardMock />
         </div>
@@ -34,7 +34,7 @@ const Showcase = (): JSX.Element => {
             <br />
             em <span className="amber-text">tempo real</span>.
           </h2>
-          <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-white/70">
+          <p className="mt-6 max-w-130 text-[17px] leading-relaxed text-white/70">
             Visualize cada pedido, cada motoboy e cada rota da sua operação no Rio de Janeiro.
             Eventos em segundos, não em planilhas. Decisões com dado, não com achismo.
           </p>

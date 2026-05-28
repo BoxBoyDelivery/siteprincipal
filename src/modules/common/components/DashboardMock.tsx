@@ -30,7 +30,7 @@ const ORDERS: OrderRow[] = [
 
 const DashboardMock = ({ floating = false }: DashboardMockProps): JSX.Element => {
   return (
-    <div className={`relative w-full max-w-[560px] ${floating ? 'lg:max-w-[600px]' : ''}`}>
+    <div className={`relative w-full max-w-140 ${floating ? 'lg:max-w-150' : ''}`}>
       {/* glow */}
       <div
         className="absolute -inset-10 -z-10 opacity-60 blur-3xl"
@@ -74,9 +74,9 @@ const DashboardMock = ({ floating = false }: DashboardMockProps): JSX.Element =>
               <div className="text-muted font-mono text-[10px]">hoje</div>
             </div>
             <div className="flex items-center gap-4 sm:gap-5">
-              <div className="relative h-[96px] w-[96px] shrink-0 sm:h-[112px] sm:w-[112px]">
+              <div className="relative h-24 w-24 shrink-0 sm:h-28 sm:w-28">
                 <div className="donut absolute inset-0 rounded-full" />
-                <div className="absolute inset-[12px] grid place-items-center rounded-full bg-white sm:inset-[14px]">
+                <div className="absolute inset-3 grid place-items-center rounded-full bg-white sm:inset-3.5">
                   <div className="text-center">
                     <div className="font-display text-ink tnum text-lg leading-none font-bold">
                       84%
@@ -103,7 +103,7 @@ const DashboardMock = ({ floating = false }: DashboardMockProps): JSX.Element =>
           </div>
 
           {/* mini map */}
-          <div className="border-line relative col-span-12 min-h-[140px] overflow-hidden rounded-2xl border p-3 sm:col-span-5">
+          <div className="border-line relative col-span-12 min-h-35 overflow-hidden rounded-2xl border p-3 sm:col-span-5">
             <div
               className="absolute inset-0 opacity-[.55]"
               style={{

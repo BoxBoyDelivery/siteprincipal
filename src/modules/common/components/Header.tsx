@@ -23,7 +23,7 @@ const Header = (): JSX.Element => {
           : 'pointer-events-none -translate-y-full opacity-0'
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-5 md:h-20 md:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
         <a href="#top" className="group flex items-center gap-2.5">
           <LogoIcon className="h-8 w-8 md:h-9 md:w-9" />
           <span className="font-display text-lg font-bold tracking-tight text-white md:text-xl">

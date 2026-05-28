@@ -14,11 +14,11 @@ const Hero = (): JSX.Element => {
       <div className="grid-dots absolute inset-0 opacity-70" />
       <div className="grain" />
       <div
-        className="absolute -top-40 -right-40 h-[640px] w-[640px] rounded-full opacity-30 blur-3xl"
+        className="absolute -top-40 -right-40 h-160 w-160 rounded-full opacity-30 blur-3xl"
         style={{ background: 'radial-gradient(closest-side, #FF914D, transparent 70%)' }}
       />
 
-      <div className="relative mx-auto max-w-[1280px] px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24">
+      <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <div className="reveal">
             <div className="inline-flex h-8 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 font-mono text-[11px] tracking-[0.18em] text-white/75 uppercase">
@@ -37,7 +37,7 @@ const Hero = (): JSX.Element => {
               do seu negócio.
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-white/70 md:text-[18px]">
+            <p className="mt-6 max-w-140 text-[17px] leading-relaxed text-white/70 md:text-[18px]">
               Entregas inteligentes, despacho automático e monitoramento em tempo real para sua
               operação. Construído para escalar com sua marca.
             </p>
@@ -57,7 +57,7 @@ const Hero = (): JSX.Element => {
               </a>
             </div>
 
-            <div className="mt-10 grid max-w-[560px] grid-cols-3 gap-4 md:gap-8">
+            <div className="mt-10 grid max-w-140 grid-cols-3 gap-4 md:gap-8">
               {STATS.map(([n, l]) => (
                 <div key={l}>
                   <div

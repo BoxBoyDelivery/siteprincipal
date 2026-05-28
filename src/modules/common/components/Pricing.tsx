@@ -45,7 +45,7 @@ const PriceColumn = ({ pill, title, children }: ColProps): JSX.Element => {
 const Pricing = (): JSX.Element => {
   return (
     <section id="planos" className="bg-paper-alt py-20 md:py-28">
-      <div className="mx-auto max-w-[1280px] px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="reveal mb-12 max-w-3xl md:mb-14">
           <div className="text-muted font-mono text-[11px] tracking-[0.22em] uppercase">
             Comercial
@@ -56,7 +56,7 @@ const Pricing = (): JSX.Element => {
           >
             Tabela <span className="amber-text">comercial</span>, sem letrinha miúda.
           </h2>
-          <p className="text-muted mt-5 max-w-[600px] text-[17px] leading-relaxed">
+          <p className="text-muted mt-5 max-w-150 text-[17px] leading-relaxed">
             Preço por moto na sua loja + taxa por KM. Simples de calcular, fácil de escalar.
           </p>
         </div>

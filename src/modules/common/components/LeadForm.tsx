@@ -4,8 +4,9 @@ import { useMemo, useState, type JSX } from 'react'
 
 import { SubjectSelect } from '@/modules/common/components/SubjectSelect'
 import { ArrowIcon, CheckIcon } from '@/modules/common/icons'
-import type { Errors, LeadField, Touched } from '@/modules/common/types'
 import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/form'
+
+import type { Errors, LeadField, Touched } from '@/modules/common/types'
 
 const SUBJECTS: string[] = ['Quero ser parceiro', 'Tabela comercial', 'Suporte', 'Outro']
 
@@ -70,11 +71,11 @@ const LeadForm = (): JSX.Element => {
     <section id="formulario" className="bg-ink relative overflow-hidden py-20 text-white md:py-28">
       <div className="grid-dots absolute inset-0 opacity-60" />
       <div
-        className="absolute -top-40 right-1/4 h-[560px] w-[560px] rounded-full opacity-25 blur-3xl"
+        className="absolute -top-40 right-1/4 h-140 w-140 rounded-full opacity-25 blur-3xl"
         style={{ background: 'radial-gradient(closest-side, #FF914D, transparent 70%)' }}
       />
 
-      <div className="relative mx-auto max-w-[1100px] px-5 md:px-8">
+      <div className="max-w-max-w-275 relative mx-auto px-5 md:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div className="reveal">
             <div className="text-amber3 font-mono text-[11px] tracking-[0.22em] uppercase">
@@ -86,7 +87,7 @@ const LeadForm = (): JSX.Element => {
             >
               Vamos elevar a <span className="amber-text">performance</span> da sua operação.
             </h2>
-            <p className="mt-5 max-w-[480px] text-[16px] leading-relaxed text-white/70">
+            <p className="mt-5 max-w-120 text-[16px] leading-relaxed text-white/70">
               Conte um pouco sobre sua loja e o time comercial entra em contato em até 1 dia útil.
               Sem promessa vazia, sem ligação fora de hora.
             </p>
@@ -113,7 +114,7 @@ const LeadForm = (): JSX.Element => {
                     <h3 className="font-display mt-5 text-2xl font-bold tracking-tight">
                       Recebido. Obrigado.
                     </h3>
-                    <p className="text-muted-dark mt-2 max-w-[360px]">
+                    <p className="text-muted-dark mt-2 max-w-90">
                       Nosso time comercial vai te chamar em{' '}
                       <strong>{phone || 'seu telefone'}</strong> em até 1 dia útil.
                     </p>
