@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import type { JSX } from 'react'
+import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
@@ -38,8 +38,7 @@ const InstitucionalPage = (): JSX.Element => {
   const activeTab = TABS.find((t) => t.id === tab)!
 
   return (
-    <main className="min-h-screen bg-paper">
-
+    <main className="bg-paper min-h-screen">
       {/* ── Dark hero ───────────────────────────────────────────────────── */}
       <div className="bg-ink-deep relative overflow-hidden">
         <div className="grain" />
@@ -55,7 +54,7 @@ const InstitucionalPage = (): JSX.Element => {
           </Link>
           <Link
             href="/"
-            className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.18em] uppercase text-white/45 transition-colors duration-200 hover:text-white/80"
+            className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.18em] text-white/45 uppercase transition-colors duration-200 hover:text-white/80"
           >
             <ArrowIcon className="h-3.5 w-3.5 rotate-180" />
             Voltar
@@ -63,17 +62,16 @@ const InstitucionalPage = (): JSX.Element => {
         </div>
 
         {/* hero content */}
-        <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-8 md:px-8 md:pb-16 md:pt-10">
+        <div className="relative mx-auto max-w-7xl px-5 pt-8 pb-12 md:px-8 md:pt-10 md:pb-16">
           <div className="reveal">
-            <div className="mb-3 font-mono text-[11px] tracking-[0.22em] uppercase text-white/35">
+            <div className="mb-3 font-mono text-[11px] tracking-[0.22em] text-white/35 uppercase">
               Central Institucional
             </div>
             <h1
-              className="font-display font-bold leading-[1.02] tracking-tight text-white"
+              className="font-display leading-[1.02] font-bold tracking-tight text-white"
               style={{ fontSize: 'clamp(2rem, 5vw, 3.6rem)' }}
             >
-              Transparência e{' '}
-              <span className="amber-text">confiança</span>
+              Transparência e <span className="amber-text">confiança</span>
               <br className="hidden sm:block" /> em cada detalhe.
             </h1>
             <p className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-white/50 md:text-[16px]">
@@ -82,7 +80,7 @@ const InstitucionalPage = (): JSX.Element => {
             </p>
             <div className="mt-3 flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-              <span className="font-mono text-[10px] tracking-wider uppercase text-white/30">
+              <span className="font-mono text-[10px] tracking-wider text-white/30 uppercase">
                 Atualizado · Maio 2025
               </span>
             </div>
@@ -108,12 +106,9 @@ const InstitucionalPage = (): JSX.Element => {
           </div>
 
           {/* active label */}
-          <div
-            className="reveal mt-5 flex items-center gap-2"
-            style={{ transitionDelay: '130ms' }}
-          >
-            <div className="h-px w-6 bg-amber3/45" />
-            <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-amber3/60">
+          <div className="reveal mt-5 flex items-center gap-2" style={{ transitionDelay: '130ms' }}>
+            <div className="bg-amber3/45 h-px w-6" />
+            <span className="text-amber3/60 font-mono text-[10px] tracking-[0.22em] uppercase">
               {activeTab.desc}
             </span>
           </div>

@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
   const router = useRouter()
 
   const handleNavigateInstitutionalPage = (): void => {
-    router.push('/institutional')
+    router.push('/institucional')
   }
 
   const scrolled = useScrolled(8)

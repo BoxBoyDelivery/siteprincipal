@@ -5,14 +5,30 @@ import type { IconProps } from '@/modules/common/types'
 /* ── Local icons ──────────────────────────────────────────────────────────── */
 
 const ShieldCheckIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     <path d="M9 12l2 2 4-4" />
   </svg>
 )
 
 const BarChartIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
     <line x1="18" y1="20" x2="18" y2="10" />
     <line x1="12" y1="20" x2="12" y2="4" />
     <line x1="6" y1="20" x2="6" y2="14" />
@@ -21,7 +37,15 @@ const BarChartIcon = (p: IconProps) => (
 )
 
 const SlidersIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
     <line x1="4" y1="21" x2="4" y2="14" />
     <line x1="4" y1="10" x2="4" y2="3" />
     <line x1="12" y1="21" x2="12" y2="12" />
@@ -35,13 +59,29 @@ const SlidersIcon = (p: IconProps) => (
 )
 
 const MegaphoneIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
     <path d="M3 11l19-9-9 19-2-8-8-2z" />
   </svg>
 )
 
 const SettingsIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
     <circle cx="12" cy="12" r="3" />
     <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
   </svg>
@@ -68,7 +108,8 @@ const COOKIE_TYPES: CookieType[] = [
     name: 'Essenciais',
     badge: 'Obrigatório',
     required: true,
-    description: 'Necessários para o funcionamento básico da plataforma. Não podem ser desativados.',
+    description:
+      'Necessários para o funcionamento básico da plataforma. Não podem ser desativados.',
     items: ['Pop-up de boas-vindas', 'Preferências da página', 'Termos de uso aceitos'],
     badgeStyle: 'bg-emerald-100 text-emerald-700',
     iconBg: 'bg-emerald-500 text-white',
@@ -121,7 +162,7 @@ const SectionLabel = ({ num, title }: { num: string; title: string }) => (
       {num}
     </span>
     <h2
-      className="font-display text-ink font-bold leading-snug tracking-tight"
+      className="font-display text-ink leading-snug font-bold tracking-tight"
       style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.6rem)' }}
     >
       {title}
@@ -133,7 +174,6 @@ const SectionLabel = ({ num, title }: { num: string; title: string }) => (
 
 const CookiesSection = (): JSX.Element => (
   <div className="space-y-16 md:space-y-20">
-
     {/* Cookie types grid */}
     <div>
       <SectionLabel num="01" title="Tipos de cookies que utilizamos" />
@@ -148,16 +188,20 @@ const CookiesSection = (): JSX.Element => (
               <span className={`grid h-10 w-10 place-items-center rounded-xl ${c.iconBg}`}>
                 <c.Icon className="h-4.5 w-4.5" />
               </span>
-              <span className={`rounded-full px-2.5 py-1 font-mono text-[9px] tracking-[0.18em] uppercase ${c.badgeStyle}`}>
+              <span
+                className={`rounded-full px-2.5 py-1 font-mono text-[9px] tracking-[0.18em] uppercase ${c.badgeStyle}`}
+              >
                 {c.badge}
               </span>
             </div>
-            <div className="font-display text-ink text-[17px] font-bold mb-2 leading-snug">{c.name}</div>
-            <p className="text-muted text-[13.5px] leading-relaxed mb-4">{c.description}</p>
+            <div className="font-display text-ink mb-2 text-[17px] leading-snug font-bold">
+              {c.name}
+            </div>
+            <p className="text-muted mb-4 text-[13.5px] leading-relaxed">{c.description}</p>
             <ul className="mt-auto space-y-1.5">
               {c.items.map((item, j) => (
-                <li key={j} className="flex items-center gap-2 text-[13px] text-muted-dark">
-                  <span className="h-1 w-1 rounded-full bg-current opacity-50 shrink-0" />
+                <li key={j} className="text-muted-dark flex items-center gap-2 text-[13px]">
+                  <span className="h-1 w-1 shrink-0 rounded-full bg-current opacity-50" />
                   {item}
                 </li>
               ))}
@@ -171,14 +215,14 @@ const CookiesSection = (): JSX.Element => (
     <div>
       <SectionLabel num="02" title="Como gerenciar cookies" />
       <div
-        className="reveal rounded-3xl border border-line overflow-hidden"
+        className="reveal border-line overflow-hidden rounded-3xl border"
         style={{ transitionDelay: '60ms' }}
       >
         <div className="fviz relative h-20 md:h-24">
           <div className="fviz-grid" />
           <div className="absolute inset-0 flex items-center justify-center">
             <span
-              className="font-display select-none font-bold leading-none text-amber3/[0.18]"
+              className="font-display text-amber3/18 leading-none font-bold select-none"
               style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
             >
               Controle total
@@ -188,7 +232,9 @@ const CookiesSection = (): JSX.Element => (
             <span className="amber-bg text-ink shadow-amber-soft grid h-7 w-7 place-items-center rounded-lg">
               <SettingsIcon className="h-3.5 w-3.5" />
             </span>
-            <span className="text-amber1/90 font-mono text-[10px] tracking-[0.18em] uppercase">Gerenciar</span>
+            <span className="text-amber1/90 font-mono text-[10px] tracking-[0.18em] uppercase">
+              Gerenciar
+            </span>
           </div>
         </div>
         <div className="bg-white px-6 py-5 md:px-8 md:py-6">
@@ -206,27 +252,26 @@ const CookiesSection = (): JSX.Element => (
     <div>
       <SectionLabel num="03" title="Cookies de terceiros" />
       <div
-        className="reveal flex items-start gap-5 rounded-2xl border border-amber3/30 bg-amber3/5 p-6"
+        className="reveal border-amber3/30 bg-amber3/5 flex items-start gap-5 rounded-2xl border p-6"
         style={{ transitionDelay: '60ms' }}
       >
         <div className="amber-bg text-ink shadow-amber-soft grid h-10 w-10 shrink-0 place-items-center rounded-xl">
           <MegaphoneIcon className="h-4.5 w-4.5" />
         </div>
         <div>
-          <div className="font-display text-ink text-[16px] font-bold mb-2">Facebook Pixel</div>
+          <div className="font-display text-ink mb-2 text-[16px] font-bold">Facebook Pixel</div>
           <p className="text-muted-dark text-[14px] leading-relaxed">
-            Utilizamos o <span className="font-semibold text-ink">Facebook Pixel</span> para mensurar
-            a eficácia das nossas campanhas de marketing. Esse cookie é gerenciado pelo Facebook e
-            está sujeito à política de privacidade da Meta Platforms, Inc. Você pode optar por não
-            participar em{' '}
-            <span className="font-mono text-[12px] text-muted bg-paper-alt rounded px-1.5 py-0.5">
+            Utilizamos o <span className="text-ink font-semibold">Facebook Pixel</span> para
+            mensurar a eficácia das nossas campanhas de marketing. Esse cookie é gerenciado pelo
+            Facebook e está sujeito à política de privacidade da Meta Platforms, Inc. Você pode
+            optar por não participar em{' '}
+            <span className="text-muted bg-paper-alt rounded px-1.5 py-0.5 font-mono text-[12px]">
               facebook.com/settings
             </span>
           </p>
         </div>
       </div>
     </div>
-
   </div>
 )
 

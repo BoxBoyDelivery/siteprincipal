@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 
 import { cn } from '@/lib/utils'
+import { PolicyDrawer } from '@/modules/common/components/PolicyDrawer'
+import { WelcomePopup } from '@/modules/common/components/WelcomePopup'
 import '@/styles/globals.css'
 import { inter, jetbrainsMono, spaceGrotesk } from '@/utils/fonts'
 
@@ -62,6 +64,8 @@ export default function RootLayout({
     >
       <body className="font-sans">
         {children}
+        <WelcomePopup />
+        <PolicyDrawer />
         {META_PIXEL_ID && (
           <>
             <Script id="meta-pixel" strategy="afterInteractive">

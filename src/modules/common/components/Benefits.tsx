@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import type { JSX } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { ArrowIcon } from '@/modules/common/icons'
 import type { IconProps } from '@/modules/common/types'
@@ -147,14 +147,14 @@ const VizZero = () => (
   <div className="absolute inset-x-0 bottom-0 flex h-full items-center justify-center">
     <div className="flex flex-col items-center gap-2">
       <span
-        className="font-display select-none font-bold leading-none text-amber3/[0.18]"
+        className="font-display text-amber3/18 leading-none font-bold select-none"
         style={{ fontSize: 'clamp(2.6rem, 6vw, 4rem)' }}
       >
         R$&nbsp;0
       </span>
       <div className="flex gap-1.5">
         {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="h-1 w-7 rounded-full bg-amber2/25" />
+          <div key={i} className="bg-amber2/25 h-1 w-7 rounded-full" />
         ))}
       </div>
     </div>
@@ -166,7 +166,7 @@ const VizTrendBars = () => (
     {[28, 42, 35, 58, 48, 72, 65, 90].map((h, i) => (
       <div
         key={i}
-        className="grow-bar flex-1 rounded-t-sm bg-amber2/40"
+        className="grow-bar bg-amber2/40 flex-1 rounded-t-sm"
         style={{
           height: `${h}%`,
           animationDelay: `${i * 0.12}s`,
@@ -185,13 +185,13 @@ const VizProgress = () => (
       { label: 'Rating', pct: 96 },
     ].map((d, i) => (
       <div key={i} className="flex items-center gap-2">
-        <span className="w-11 shrink-0 font-mono text-[8px] uppercase text-muted/50">
+        <span className="text-muted/50 w-11 shrink-0 font-mono text-[8px] uppercase">
           {d.label}
         </span>
-        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-amber1/15">
-          <div className="h-full rounded-full amber-bg" style={{ width: `${d.pct}%` }} />
+        <div className="bg-amber1/15 h-1.5 flex-1 overflow-hidden rounded-full">
+          <div className="amber-bg h-full rounded-full" style={{ width: `${d.pct}%` }} />
         </div>
-        <span className="w-6 text-right font-mono text-[8px] text-muted/50 tnum">{d.pct}%</span>
+        <span className="text-muted/50 tnum w-6 text-right font-mono text-[8px]">{d.pct}%</span>
       </div>
     ))}
   </div>
@@ -203,12 +203,14 @@ const VizNetwork = () => (
     viewBox="0 0 160 80"
     preserveAspectRatio="xMidYMid meet"
   >
-    {([
-      [26, 18],
-      [134, 18],
-      [22, 62],
-      [138, 62],
-    ] as [number, number][]).map(([x, y], i) => (
+    {(
+      [
+        [26, 18],
+        [134, 18],
+        [22, 62],
+        [138, 62],
+      ] as [number, number][]
+    ).map(([x, y], i) => (
       <g key={i}>
         <line
           x1="80"
@@ -244,7 +246,7 @@ const VizEarnings = () => (
   <div className="absolute inset-x-0 bottom-0 flex h-full items-center justify-center">
     <div className="flex flex-col items-center gap-2.5">
       <span
-        className="font-display select-none font-bold leading-none text-amber3/[0.2] tnum"
+        className="font-display text-amber3/20 tnum leading-none font-bold select-none"
         style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)' }}
       >
         +24%
@@ -253,7 +255,7 @@ const VizEarnings = () => (
         {[16, 28, 22, 40, 32, 52].map((h, i) => (
           <div
             key={i}
-            className="wave-bar w-3 rounded-sm bg-amber2/35"
+            className="wave-bar bg-amber2/35 w-3 rounded-sm"
             style={{ height: `${h}px`, animationDelay: `${i * 0.18}s` }}
           />
         ))}
@@ -267,20 +269,22 @@ const VizWeek = () => (
     <div className="grid w-full grid-cols-7 gap-1">
       {['S', 'T', 'Q', 'Q', 'S', 'S', 'D'].map((d, i) => (
         <div key={i} className="flex flex-col items-center gap-1">
-          <span className="font-mono text-[7px] text-muted/40">{d}</span>
+          <span className="text-muted/40 font-mono text-[7px]">{d}</span>
           <div
             className={`flex h-5 w-full items-center justify-center rounded-md ${
               i < 5 ? 'amber-bg' : 'bg-line/70'
             }`}
           >
-            {i < 5 && <div className="h-1.5 w-1.5 rounded-full bg-ink/45" />}
+            {i < 5 && <div className="bg-ink/45 h-1.5 w-1.5 rounded-full" />}
           </div>
         </div>
       ))}
     </div>
     <div className="flex items-center gap-1.5">
       <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
-      <span className="font-mono text-[9px] uppercase tracking-wider text-muted/65">Pago · Sex</span>
+      <span className="text-muted/65 font-mono text-[9px] tracking-wider uppercase">
+        Pago · Sex
+      </span>
     </div>
   </div>
 )
@@ -345,10 +349,12 @@ const VizSmartRoute = () => (
     />
     <circle cx="16" cy="64" r="5" fill="#292828" opacity="0.18" />
     <circle cx="16" cy="64" r="3" fill="#ff914d" />
-    {([
-      [52, 26],
-      [94, 52],
-    ] as [number, number][]).map(([x, y], i) => (
+    {(
+      [
+        [52, 26],
+        [94, 52],
+      ] as [number, number][]
+    ).map(([x, y], i) => (
       <circle key={i} cx={x} cy={y} r="3.5" fill="#ff914d" opacity="0.55" />
     ))}
     <circle cx="144" cy="16" r="8" fill="#ffbd59" opacity="0.22" className="node-pulse" />
@@ -470,7 +476,7 @@ const BenefitCard = ({ benefit: b, idx }: BenefitCardProps): JSX.Element => (
     </div>
 
     <div className="flex flex-1 flex-col pt-5 md:pt-6">
-      <h3 className="font-display text-ink text-[20px] font-bold leading-snug tracking-tight md:text-[22px]">
+      <h3 className="font-display text-ink text-[20px] leading-snug font-bold tracking-tight md:text-[22px]">
         {b.title}
       </h3>
       <p className="text-muted-dark mt-2.5 flex-1 text-[14.5px] leading-relaxed">{b.body}</p>
@@ -514,7 +520,7 @@ const Benefits = (): JSX.Element => {
             Benefícios
           </div>
           <h2
-            className="font-display text-ink mt-3 font-bold leading-[1.02] tracking-tight"
+            className="font-display text-ink mt-3 leading-[1.02] font-bold tracking-tight"
             style={{ fontSize: 'clamp(2rem, 4.4vw, 3.4rem)' }}
           >
             Vantagens <span className="amber-text">reais</span> para quem faz a entrega acontecer.
@@ -525,19 +531,14 @@ const Benefits = (): JSX.Element => {
           </p>
         </div>
 
-        <div
-          className="reveal mb-10 md:mb-12"
-          style={{ transitionDelay: '80ms' }}
-        >
-          <div className="inline-flex gap-1 rounded-full border border-line bg-paper-alt p-1">
+        <div className="reveal mb-10 md:mb-12" style={{ transitionDelay: '80ms' }}>
+          <div className="border-line bg-paper-alt inline-flex gap-1 rounded-full border p-1">
             {(['lojistas', 'entregadores'] as const).map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
                 className={`rounded-full px-5 py-2.5 font-mono text-[11px] tracking-[0.18em] uppercase transition-all duration-300 ${
-                  tab === t
-                    ? 'amber-bg text-ink shadow-amber-soft'
-                    : 'text-muted hover:text-ink'
+                  tab === t ? 'amber-bg text-ink shadow-amber-soft' : 'text-muted hover:text-ink'
                 }`}
               >
                 {t === 'lojistas' ? 'Lojistas' : 'Entregadores'}
