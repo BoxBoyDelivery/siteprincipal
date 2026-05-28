@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'BoxBoy',
     title: 'BoxBoy — Entregas ultrarrápidas com as melhores taxas',
     description:
-      'Conectamos lojistas e entregadores para entregas rápidas em todo a cidade do Rio de Janeiro.',
+      'Conectamos lojistas e entregadores com entregas rápidas em toda a cidade do Rio de Janeiro.',
     images: [
       {
         url: `${BASE_URL}/assets/og-image.png`,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BoxBoy — Entregas ultrarrápidas',
     description:
-      'Conectamos lojistas e entregadores para entregas rápidas na cidade do Rio de Janeiro.',
+      'Conectamos lojistas e entregadores com entregas rápidas na cidade do Rio de Janeiro.',
     images: [`${BASE_URL}/assets/og-image.png`],
   },
   robots: { index: true, follow: true },
