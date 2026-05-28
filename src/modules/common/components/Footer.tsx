@@ -29,9 +29,9 @@ const COLUMNS: FooterColumn[] = [
   {
     title: 'Legal',
     links: [
-      { label: 'Privacidade', href: '#' },
-      { label: 'Cookies', href: '#' },
-      { label: 'Termos', href: '#' },
+      { label: 'Privacidade', href: '/institucional' },
+      { label: 'Cookies', href: '/institucional' },
+      { label: 'Termos', href: '/institucional' },
     ],
   },
 ]
