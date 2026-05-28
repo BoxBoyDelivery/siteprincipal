@@ -1,0 +1,47 @@
+# Dependências
+node_modules
+.pnp
+.pnp.js
+
+# Build e的输出
+.next
+out
+dist
+build
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor e IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Gerados automaticamente
+src/generated
+.prisma
+prisma/generated
+
+# Testes e cobertura
+coverage
+.nyc_output
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js
+cache
