@@ -4,9 +4,8 @@ import { useMemo, useState, type JSX } from 'react'
 
 import { SubjectSelect } from '@/modules/common/components/SubjectSelect'
 import { ArrowIcon, CheckIcon } from '@/modules/common/icons'
-import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/form'
-
 import type { Errors, LeadField, Touched } from '@/modules/common/types'
+import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/form'
 
 const SUBJECTS: string[] = ['Quero ser parceiro', 'Tabela comercial', 'Suporte', 'Outro']
 
@@ -75,7 +74,7 @@ const LeadForm = (): JSX.Element => {
         style={{ background: 'radial-gradient(closest-side, #FF914D, transparent 70%)' }}
       />
 
-      <div className="max-w-max-w-275 relative mx-auto px-5 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div className="reveal">
             <div className="text-amber3 font-mono text-[11px] tracking-[0.22em] uppercase">
