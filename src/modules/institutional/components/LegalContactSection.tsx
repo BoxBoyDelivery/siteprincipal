@@ -149,7 +149,7 @@ const CONTACTS: ContactCard[] = [
   {
     Icon: BuildingIcon,
     label: 'CNPJ',
-    sublabel: 'BoxBoy LTDA',
+    sublabel: 'BoxBoy Delivery LTDA',
     value: '58.765.722/0001-17',
     badge: 'Pessoa Jurídica',
     badgeStyle: 'bg-gray-100 text-gray-600',

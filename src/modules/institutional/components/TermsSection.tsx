@@ -34,7 +34,7 @@ const ARTICLES: Article[] = [
     content: (
       <div className="space-y-2">
         <p className="text-muted-dark mb-3 text-[14.5px] leading-relaxed">
-          A <Highlight>Box Delivery S.A.</Highlight> oferece uma plataforma SaaS de gestão de
+          A <Highlight>BoxBoy Delivery LTDA</Highlight> oferece uma plataforma SaaS de gestão de
           entregas para lojistas e entregadores autônomos. Nossos serviços incluem:
         </p>
         <ul className="space-y-2 pl-1">
