@@ -1,3 +1,5 @@
+import type { JSX } from 'react'
+
 import type { IconProps } from '@/modules/common/types'
 
 /* ── Partners ─────────────────────────────────────────────────────────────── */
@@ -12,7 +14,7 @@ export { SpoletoIcon } from './SpoletoIcon'
 
 /* ── Brand ────────────────────────────────────────────────────────────────── */
 
-export const LogoIcon = (p: IconProps) => (
+const LogoIcon = (p: IconProps): JSX.Element => (
   <svg viewBox="0 0 36 36" {...p}>
     <defs>
       <linearGradient id="boxboy-logo-grad" x1="0" x2="1" y1="0" y2="1">
@@ -28,7 +30,7 @@ export const LogoIcon = (p: IconProps) => (
 
 /* ── UI ───────────────────────────────────────────────────────────────────── */
 
-export const ArrowIcon = (p: IconProps) => (
+const ArrowIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -42,7 +44,7 @@ export const ArrowIcon = (p: IconProps) => (
   </svg>
 )
 
-export const PlayIcon = (p: IconProps) => (
+const PlayIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -57,7 +59,7 @@ export const PlayIcon = (p: IconProps) => (
   </svg>
 )
 
-export const CheckIcon = (p: IconProps) => (
+const CheckIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -71,7 +73,7 @@ export const CheckIcon = (p: IconProps) => (
   </svg>
 )
 
-export const ChevronIcon = (p: IconProps) => (
+const ChevronIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -87,7 +89,7 @@ export const ChevronIcon = (p: IconProps) => (
 
 /* ── Feature icons ────────────────────────────────────────────────────────── */
 
-export const BoltIcon = (p: IconProps) => (
+const BoltIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -101,7 +103,7 @@ export const BoltIcon = (p: IconProps) => (
   </svg>
 )
 
-export const PulseIcon = (p: IconProps) => (
+const PulseIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -115,7 +117,7 @@ export const PulseIcon = (p: IconProps) => (
   </svg>
 )
 
-export const RouteIcon = (p: IconProps) => (
+const RouteIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -131,7 +133,7 @@ export const RouteIcon = (p: IconProps) => (
   </svg>
 )
 
-export const HeadsetIcon = (p: IconProps) => (
+const HeadsetIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -148,7 +150,7 @@ export const HeadsetIcon = (p: IconProps) => (
   </svg>
 )
 
-export const PlugIcon = (p: IconProps) => (
+const PlugIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -162,7 +164,7 @@ export const PlugIcon = (p: IconProps) => (
   </svg>
 )
 
-export const CoinIcon = (p: IconProps) => (
+const CoinIcon = (p: IconProps): JSX.Element => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -180,7 +182,7 @@ export const CoinIcon = (p: IconProps) => (
 
 /* ── Social ───────────────────────────────────────────────────────────────── */
 
-export const IGIcon = (p: IconProps) => (
+const IGIcon = (p: IconProps): JSX.Element => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...p}>
     <rect x="3" y="3" width="18" height="18" rx="5" />
     <circle cx="12" cy="12" r="4" />
@@ -188,20 +190,177 @@ export const IGIcon = (p: IconProps) => (
   </svg>
 )
 
-export const FBIcon = (p: IconProps) => (
+const FBIcon = (p: IconProps): JSX.Element => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
     <path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h2V2.1C16.7 2 15.5 2 14.2 2 11.6 2 10 3.6 10 6.5V10H7v4h3v8z" />
   </svg>
 )
 
-export const INIcon = (p: IconProps) => (
+const INIcon = (p: IconProps): JSX.Element => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
     <path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h3v1.8c.6-1 1.9-2.1 4-2.1 4.3 0 5 2.8 5 6.4V21h-3v-5.2c0-1.5-.4-2.9-2.2-2.9-2 0-2.3 1.6-2.3 3V21H9z" />
   </svg>
 )
 
-export const YTIcon = (p: IconProps) => (
+const YTIcon = (p: IconProps): JSX.Element => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
     <path d="M23 12s0-3.4-.4-5a2.7 2.7 0 0 0-1.9-1.9C18.9 4.7 12 4.7 12 4.7s-6.9 0-8.7.4A2.7 2.7 0 0 0 1.4 7C1 8.6 1 12 1 12s0 3.4.4 5a2.7 2.7 0 0 0 1.9 1.9c1.8.4 8.7.4 8.7.4s6.9 0 8.7-.4a2.7 2.7 0 0 0 1.9-1.9c.4-1.6.4-5 .4-5zM10 15.5v-7l6 3.5z" />
   </svg>
 )
+
+const TagIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+    <circle cx="7" cy="7" r="1.5" fill="currentColor" />
+  </svg>
+)
+
+const TrendUpIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+    <polyline points="17 6 23 6 23 12" />
+  </svg>
+)
+
+const GridIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <rect x="3" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="3" width="7" height="7" rx="1" />
+    <rect x="3" y="14" width="7" height="7" rx="1" />
+    <rect x="14" y="14" width="7" height="7" rx="1" />
+  </svg>
+)
+
+const LinkIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+  </svg>
+)
+
+const WalletIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <rect x="2" y="5" width="20" height="14" rx="3" />
+    <path d="M16 12h2" />
+    <path d="M2 10h20" />
+  </svg>
+)
+
+const CalendarCheckIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+    <path d="M9 16l2 2 4-4" />
+  </svg>
+)
+
+const HeadphonesIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" />
+    <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+  </svg>
+)
+
+const MotoIcon = (p: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...p}
+  >
+    <circle cx="5.5" cy="17.5" r="2.5" />
+    <circle cx="18.5" cy="17.5" r="2.5" />
+    <path d="M8 17.5h7" />
+    <path d="M15 6h2l2 4H9l1.5-4H15z" />
+    <path d="M9 10l-3 7.5" />
+    <circle cx="15" cy="4" r="1" fill="currentColor" />
+  </svg>
+)
+
+export {
+  LogoIcon,
+  ArrowIcon,
+  PlayIcon,
+  CheckIcon,
+  ChevronIcon,
+  BoltIcon,
+  PulseIcon,
+  RouteIcon,
+  HeadsetIcon,
+  PlugIcon,
+  CoinIcon,
+  IGIcon,
+  FBIcon,
+  INIcon,
+  YTIcon,
+  TagIcon,
+  TrendUpIcon,
+  GridIcon,
+  LinkIcon,
+  WalletIcon,
+  CalendarCheckIcon,
+  HeadphonesIcon,
+  MotoIcon,
+}

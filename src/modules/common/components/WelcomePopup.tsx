@@ -1,6 +1,7 @@
 'use client'
 
 import type { JSX } from 'react'
+
 import { useEffect, useRef, useState } from 'react'
 
 import { ArrowIcon, BoltIcon, LogoIcon, PulseIcon, RouteIcon } from '@/modules/common/icons'

@@ -144,7 +144,7 @@ const TermsSection = (): JSX.Element => (
           Termos de Uso
         </h2>
         <p className="text-muted mt-1.5 text-[14px]">
-          Box Delivery S.A. · Vigência a partir de{' '}
+          Box Boy Delivery LTDA · Vigência a partir de{' '}
           <span className="font-semibold">Janeiro 2025</span>
         </p>
       </div>

@@ -75,7 +75,7 @@ const InstitucionalPage = (): JSX.Element => {
               <br className="hidden sm:block" /> em cada detalhe.
             </h1>
             <p className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-white/50 md:text-[16px]">
-              Políticas, termos e informações jurídicas da Box Delivery S.A. — atualizadas e em
+              Políticas, termos e informações jurídicas da Box Boy Delivery LTDA — atualizadas e em
               conformidade com a LGPD.
             </p>
             <div className="mt-3 flex items-center gap-1.5">

@@ -1,6 +1,7 @@
 import type { JSX } from 'react'
 
 import { FBIcon, IGIcon, INIcon, LogoIcon, YTIcon } from '@/modules/common/icons'
+
 import type { IconComponent } from '@/modules/common/types'
 
 interface FooterColumn {

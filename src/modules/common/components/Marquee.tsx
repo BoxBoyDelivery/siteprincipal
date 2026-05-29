@@ -1,5 +1,6 @@
-import { partnerSlots } from '@/modules/common/data/partners'
 import type { JSX } from 'react'
+
+import { partnerSlots } from '@/modules/common/data/partners'
 import { PartnerChip } from './PartnerChip'
 
 const Marquee = (): JSX.Element => {
