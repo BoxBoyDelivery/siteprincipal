@@ -1,4 +1,5 @@
 import type { NextRequest } from 'next/server'
+
 import { Resend } from 'resend'
 
 import { LeadNotificationEmail } from '@/modules/common/emails/LeadNotificationEmail'
