@@ -22,8 +22,8 @@ const ARTICLES: Article[] = [
     title: 'Aceitação dos Termos',
     content: (
       <p className="text-muted-dark text-[14.5px] leading-relaxed">
-        Ao acessar ou utilizar a plataforma Box Delivery, você concorda com estes Termos e
-        Condições. Se você não concorda com qualquer parte destes termos,{' '}
+        Ao acessar ou utilizar a plataforma BoxBoy, você concorda com estes Termos e Condições. Se
+        você não concorda com qualquer parte destes termos,{' '}
         <Highlight>não deve utilizar nossos serviços</Highlight>.
       </p>
     ),

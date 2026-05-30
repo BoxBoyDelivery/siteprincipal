@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowIcon, BoltIcon, LogoIcon, PulseIcon, RouteIcon } from '@/modules/common/icons'
 
 const STORAGE_KEY = 'bb_welcome_ts'
-const INTERVAL_MS = 5 * 60 * 1000
+const INTERVAL_MS = 10 * 60 * 1000 // 10 minutes
 
 const highlights = [
   { icon: BoltIcon, label: 'Despacho automático', sub: 'Aloca em menos de 3 segundos' },
