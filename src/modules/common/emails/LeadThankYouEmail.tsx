@@ -18,6 +18,7 @@ interface Props {
   name: string
   phone: string
   subject: string
+  message?: string
 }
 
 const AMBER = '#ff914d'
@@ -37,7 +38,7 @@ const CHECKS: string[] = [
   'Setup técnico assistido',
 ]
 
-const LeadThankYouEmail = ({ name, phone, subject }: Props): JSX.Element => {
+const LeadThankYouEmail = ({ name, phone, subject, message }: Props): JSX.Element => {
   return (
     <Html lang="pt-BR">
       <Head />
@@ -208,6 +209,41 @@ const LeadThankYouEmail = ({ name, phone, subject }: Props): JSX.Element => {
                         ))}
                       </tbody>
                     </table>
+
+                    {/* User's message echoed back */}
+                    {message ? (
+                      <Section
+                        style={{
+                          backgroundColor: BG,
+                          border: `1px solid ${BORDER}`,
+                          borderRadius: 8,
+                          padding: '14px 16px',
+                          marginBottom: 24,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            margin: '0 0 6px',
+                            color: TEXT_MUTED,
+                            fontSize: 12,
+                            fontWeight: 600,
+                          }}
+                        >
+                          Sua mensagem
+                        </Text>
+                        <Text
+                          style={{
+                            margin: 0,
+                            color: TEXT_PRIMARY,
+                            fontSize: 14,
+                            lineHeight: 1.65,
+                            whiteSpace: 'pre-wrap',
+                          }}
+                        >
+                          {message}
+                        </Text>
+                      </Section>
+                    ) : null}
 
                     <Hr style={{ margin: '0 0 24px', borderColor: BORDER }} />
 

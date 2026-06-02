@@ -10,9 +10,10 @@ import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/
 const SUBJECTS: string[] = ['Quero ser parceiro', 'Tabela comercial', 'Suporte', 'Outro']
 
 const BENEFITS: string[] = [
-  'Resposta em até 1 dia útil',
-  'Sem fidelidade nos primeiros 30 dias',
-  'Setup técnico assistido',
+  'Resposta de um especialista em até 1 dia útil — sem robô, sem fila',
+  'Teste sem fidelidade nos primeiros 30 dias e cancele quando quiser',
+  'Setup técnico assistido para você decolar desde a primeira entrega',
+  'Proposta sob medida para o tamanho e a rotina da sua operação',
 ]
 
 const LeadForm = (): JSX.Element => {
@@ -20,6 +21,7 @@ const LeadForm = (): JSX.Element => {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState(SUBJECTS[0])
+  const [message, setMessage] = useState('')
   const [touched, setTouched] = useState<Touched>({})
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -44,7 +46,7 @@ const LeadForm = (): JSX.Element => {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, subject }),
+        body: JSON.stringify({ name, email, phone, subject, message }),
       })
       if (!res.ok) throw new Error('server_error')
       setDone(true)
@@ -64,6 +66,7 @@ const LeadForm = (): JSX.Element => {
     setPhone('')
     setTouched({})
     setSubject(SUBJECTS[0])
+    setMessage('')
   }
 
   return (
@@ -78,7 +81,7 @@ const LeadForm = (): JSX.Element => {
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div className="reveal">
             <div className="text-amber3 font-mono text-[11px] tracking-[0.22em] uppercase">
-              Comercial
+              Fale com o comercial
             </div>
             <h2
               className="font-display mt-3 leading-[1.02] font-bold tracking-tight"
@@ -87,8 +90,9 @@ const LeadForm = (): JSX.Element => {
               Vamos elevar a <span className="amber-text">performance</span> da sua operação.
             </h2>
             <p className="mt-5 max-w-120 text-[16px] leading-relaxed text-white/70">
-              Conte um pouco sobre sua loja e o time comercial entra em contato em até 1 dia útil.
-              Sem promessa vazia, sem ligação fora de hora.
+              Conte um pouco sobre a sua loja — volume de pedidos, região de entrega e o que mais
+              aperta no dia a dia. Um especialista monta um plano sob medida e entra em contato em
+              até 1 dia útil. Sem promessa vazia, sem script decorado e sem ligação fora de hora.
             </p>
             <div className="mt-8 space-y-3 text-[14px] text-white/80">
               {BENEFITS.map((t) => (
@@ -216,6 +220,24 @@ const LeadForm = (): JSX.Element => {
                     value={subject}
                     options={SUBJECTS}
                     onChange={setSubject}
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="lf-msg"
+                    className="text-muted-dark mb-1.5 block text-[12px] font-medium"
+                  >
+                    Mensagem <span className="text-muted">(opcional)</span>
+                  </label>
+                  <textarea
+                    id="lf-msg"
+                    className="input min-h-28 resize-y py-3"
+                    rows={4}
+                    maxLength={1000}
+                    placeholder="Conte um pouco sobre sua operação, dúvidas ou o que você precisa…"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
 

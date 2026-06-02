@@ -19,6 +19,7 @@ interface Props {
   email: string
   phone: string
   subject: string
+  message?: string
 }
 
 const AMBER = '#ff914d'
@@ -32,7 +33,7 @@ const TEXT_PRIMARY = '#f9f9fb'
 const TEXT_MUTED = 'rgba(249,249,251,0.55)'
 const FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 
-const LeadNotificationEmail = ({ name, email, phone, subject }: Props): JSX.Element => {
+const LeadNotificationEmail = ({ name, email, phone, subject, message }: Props): JSX.Element => {
   return (
     <Html lang="pt-BR">
       <Head />
@@ -307,6 +308,41 @@ const LeadNotificationEmail = ({ name, email, phone, subject }: Props): JSX.Elem
                           </table>
                         </Column>
                       </Row>
+
+                      {/* Message */}
+                      {message ? (
+                        <Section
+                          style={{
+                            backgroundColor: SURFACE_RAISED,
+                            borderRadius: 10,
+                            marginTop: 8,
+                            padding: '14px 16px',
+                          }}
+                        >
+                          <Text
+                            style={{
+                              margin: '0 0 8px',
+                              color: TEXT_MUTED,
+                              fontSize: 12,
+                              fontWeight: 500,
+                            }}
+                          >
+                            Mensagem
+                          </Text>
+                          <Text
+                            style={{
+                              margin: 0,
+                              color: TEXT_PRIMARY,
+                              fontSize: 14,
+                              fontWeight: 400,
+                              lineHeight: 1.6,
+                              whiteSpace: 'pre-wrap',
+                            }}
+                          >
+                            {message}
+                          </Text>
+                        </Section>
+                      ) : null}
                     </Section>
 
                     <Hr style={{ margin: 0, borderColor: BORDER }} />
