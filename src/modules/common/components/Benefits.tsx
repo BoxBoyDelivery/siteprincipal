@@ -108,9 +108,9 @@ const entregadores: Benefit[] = [
     num: '04',
     Icon: MotoIcon,
     Viz: VizSmartRoute,
-    title: 'Rotas inteligentes',
-    body: 'Menos km rodado por corrida, mais entregas no dia. O app calcula o melhor caminho em segundos.',
-    stat: '−18% km rodado',
+    title: 'Saque Rápido',
+    body: 'Trabalhe, solicite e receba — sem complicação. O app calcula seu pagamento automaticamente e libera o valor na hora via PIX.',
+    stat: 'saque instantâneo',
   },
 ]
 

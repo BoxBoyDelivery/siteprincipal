@@ -6,20 +6,26 @@
 Nome completo e e-mail para criação de conta
 Endereço de entrega e dados de localização durante o uso do serviço
 Informações de pagamento processadas por gateways certificados (nunca armazenamos dados de cartão)
-Logs de acesso e uso da plataforma para fins de segurança 2. Como utilizamos seus dados
-Seus dados são utilizados exclusivamente para:
+Logs de acesso e uso da plataforma para fins de segurança
+
+2. Como utilizamos seus dados
+   Seus dados são utilizados exclusivamente para:
 
 Operar e melhorar nossa plataforma de entregas
 Processar pedidos, pagamentos e comunicações relacionadas
 Garantir a segurança da conta e prevenir fraudes
 Enviar notificações essenciais sobre o serviço
-Cumprir obrigações legais e regulatórias 3. Compartilhamento de dados
-Não vendemos seus dados. Podemos compartilhá-los apenas com:
+Cumprir obrigações legais e regulatórias
+
+3. Compartilhamento de dados
+   Não vendemos seus dados. Podemos compartilhá-los apenas com:
 
 Entregadores parceiros, somente as informações necessárias para a entrega
 Processadores de pagamento certificados PCI-DSS
-Autoridades competentes, quando exigido por lei 4. Seus direitos (LGPD)
-Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:
+Autoridades competentes, quando exigido por lei
+
+4. Seus direitos (LGPD)
+   Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem direito a:
 
 Acesso aos dados
 Correção
@@ -81,14 +87,18 @@ Utilizamos o Facebook Pixel para mensurar a eficácia das nossas campanhas de ma
 Sistema de gestão de pedidos e entregas para lojistas
 Aplicativo para entregadores parceiros cadastrados
 Painel administrativo com relatórios e métricas
-API para integração com sistemas de terceiros 3. Obrigações do Usuário
-Ao utilizar nossos serviços, você se compromete a:
+API para integração com sistemas de terceiros
+
+3. Obrigações do Usuário
+   Ao utilizar nossos serviços, você se compromete a:
 
 Fornecer informações verdadeiras e manter seus dados atualizados
 Manter a confidencialidade das suas credenciais de acesso
 Não utilizar a plataforma para fins ilícitos ou fraudulentos
 Respeitar os direitos de outros usuários e parceiros
-Cumprir com todas as leis e regulamentos aplicáveis 4. Planos e Pagamentos
+Cumprir com todas as leis e regulamentos aplicáveis
+
+s4. Planos e Pagamentos
 Os planos de assinatura são cobrados mensalmente ou anualmente, conforme escolha do usuário. O cancelamento pode ser feito a qualquer momento, sem multa, com efeito ao final do período já pago. Não realizamos reembolsos proporcionais por períodos não utilizados, salvo nos casos previstos no Código de Defesa do Consumidor.
 
 5. Limitação de Responsabilidade

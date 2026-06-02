@@ -7,6 +7,8 @@ export interface PartnerSlot {
   id: string
   label: string
   sub: string
+  iconClassName?: string
+  chipClassName?: string
 }
 
 export interface Feature {

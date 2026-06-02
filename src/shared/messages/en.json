@@ -1,0 +1,562 @@
+{
+  "header": {
+    "nav": {
+      "platform": "Platform",
+      "partners": "Partners",
+      "plans": "Plans",
+      "contact": "Contact"
+    },
+    "institutional": "About Us",
+    "cta": "Become a partner"
+  },
+  "hero": {
+    "badge": "Last-mile · Rio de Janeiro",
+    "title": "Logistics performance for the growth of your business.",
+    "subtitle": "Smart deliveries, automatic dispatching and real-time monitoring — that's what we deliver for your operation. Built to scale with your brand.",
+    "ctaPrimary": "Become a partner",
+    "ctaSecondary": "See the platform",
+    "stats": {
+      "stores": "active stores",
+      "orders": "orders / month",
+      "support": "weekly support"
+    }
+  },
+  "marquee": {
+    "label": "Partners",
+    "title": "Active operation across major food service brands.",
+    "stat": "+40",
+    "statLabel": "connected stores"
+  },
+  "features": {
+    "label": "Platform",
+    "title": "Everything your operation needs — in a single partnership.",
+    "subtitle": "Six core features that replace spreadsheets, WhatsApp groups and improvised operators.",
+    "items": {
+      "01": {
+        "title": "Automatic dispatch",
+        "body": "Automatic order routing to the nearest couriers. Speed and accuracy without manual intervention.",
+        "stat": "assigns in < 3s"
+      },
+      "02": {
+        "title": "Real-time monitoring",
+        "body": "Track every delivery from pickup to drop-off. Full transparency for you and your end customer.",
+        "stat": "live events"
+      },
+      "03": {
+        "title": "Route optimization",
+        "body": "The algorithm automatically picks the best routes. Save time and money on every trip.",
+        "stat": "−18% km driven"
+      },
+      "04": {
+        "title": "7-day / week support",
+        "body": "Specialized support every day of the week. Your operation never stops — neither do we.",
+        "stat": "online · 24/7"
+      },
+      "05": {
+        "title": "Integrations",
+        "body": "A single platform integrated with the biggest digital menus and POS systems on the market.",
+        "stat": "+15 connectors"
+      },
+      "06": {
+        "title": "Integrated financials",
+        "body": "Real-time invoicing, simplified reconciliation and centralized payments all in one place.",
+        "stat": "closing on D+1"
+      }
+    }
+  },
+  "showcase": {
+    "label": "Real-time monitoring",
+    "title": "We control our entire operation, in real time.",
+    "subtitle": "Visualizing every order, every courier and every route of your operation in Rio de Janeiro. Events in seconds, not in spreadsheets. Decisions with data, not guesswork.",
+    "bullets": {
+      "0": "Live map with pins by delivery status",
+      "1": "Distribution donut: on time / en route / delayed",
+      "2": "Order list with SLA, ETA and full route",
+      "3": "Exportable history by day, store or courier"
+    }
+  },
+  "dashboard": {
+    "kpi": {
+      "inRoute": "En route",
+      "completed": "Completed",
+      "slaAvg": "Avg SLA"
+    },
+    "donut": {
+      "title": "Distribution",
+      "today": "today",
+      "center": "on time",
+      "onTime": "On time",
+      "inRoute": "En route",
+      "delayed": "Delayed"
+    },
+    "orders": {
+      "onTheWay": "On the way",
+      "collected": "Collected"
+    }
+  },
+  "pricing": {
+    "label": "Commercial",
+    "title": "Commercial table, no fine print.",
+    "subtitle": "Price per motorcycle at your store + fee per km. Simple to calculate, easy to scale.",
+    "col1": {
+      "pill": "Guaranteed fixed · 6 hours",
+      "title": "Orders per motorcycle at the store",
+      "row1": { "label": "Mon – Thu", "caption": "Business days", "unit": "orders" },
+      "row2": { "label": "Fri – Sun", "caption": "Weekend", "unit": "orders" }
+    },
+    "col2": {
+      "pill": "Delivery fee per km",
+      "title": "Delivery cost",
+      "row1": { "label": "0 to 3 km", "caption": "Starting range" },
+      "row2": { "label": "above 3 km", "caption": "Additional per km" }
+    },
+    "notes": {
+      "rain": {
+        "label": "Rain / high demand",
+        "body": "+ R$ 2.00 per order during periods flagged by the operation."
+      },
+      "civilDefense": {
+        "label": "Civil Defense Alert",
+        "body": "+ R$ 4.00 per order for the duration of the official alert."
+      },
+      "meal": {
+        "label": "Meal per shift",
+        "body": "Courier meal per shift at the client's expense. Above 5,000 orders/month we recommend an on-site operational lead."
+      }
+    },
+    "cta": {
+      "text": "Want to simulate your table with real volume? We'll build it with you.",
+      "button": "Talk to sales"
+    }
+  },
+  "leadForm": {
+    "label": "Commercial",
+    "title": "Let's boost the performance of your operation.",
+    "subtitle": "Tell us a bit about your store and our sales team will get in touch within 1 business day. No empty promises, no calls at odd hours.",
+    "benefits": {
+      "0": "Response within 1 business day",
+      "1": "No commitment for the first 30 days",
+      "2": "Assisted technical setup"
+    },
+    "subjects": {
+      "0": "Become a partner",
+      "1": "Commercial table",
+      "2": "Support",
+      "3": "Other"
+    },
+    "fields": {
+      "name": { "label": "Name", "placeholder": "What should we call you?" },
+      "email": { "label": "Email", "placeholder": "you@company.com" },
+      "phone": { "label": "Phone", "placeholder": "+1 (000) 000-0000" },
+      "subject": { "label": "Subject" }
+    },
+    "errors": {
+      "name": "Please provide your name.",
+      "email": "Invalid email.",
+      "phone": "Invalid phone number."
+    },
+    "submit": {
+      "idle": "Send",
+      "loading": "Sending…",
+      "error": "Could not send. Please try again in a moment."
+    },
+    "consent": "By submitting you agree to our terms and privacy policy.",
+    "success": {
+      "title": "Received. Thank you.",
+      "body": "Our sales team will call you at {phone} within 1 business day.",
+      "reset": "Send another message"
+    }
+  },
+  "benefits": {
+    "label": "Benefits",
+    "title": "Real advantages for everyone who makes delivery happen.",
+    "subtitle": "Whether you're a store owner or a partner courier — BoxBoy was built with the success of each one in mind.",
+    "tabs": {
+      "merchants": "Merchants",
+      "couriers": "Couriers"
+    },
+    "cardFooter": "benefit",
+    "merchants": {
+      "01": {
+        "title": "Zero fixed monthly fee",
+        "body": "Pay only for completed deliveries. No hidden fees, no surprises at the end of the month.",
+        "stat": "no monthly fee"
+      },
+      "02": {
+        "title": "More orders delivered",
+        "body": "Always-available couriers reduce cancellations and increase your store's conversion rate.",
+        "stat": "+32% conversion"
+      },
+      "03": {
+        "title": "Real-time reports",
+        "body": "Full dashboard with delivery, cost and performance insights. Data that drives decisions.",
+        "stat": "live data"
+      },
+      "04": {
+        "title": "Immediate integration",
+        "body": "Connect your POS or digital menu in minutes. No development, no friction, no waiting.",
+        "stat": "< 10 min setup"
+      }
+    },
+    "couriers": {
+      "01": {
+        "title": "Transparent earnings",
+        "body": "See exactly how much you'll earn per trip before accepting. No surprise deductions at the end.",
+        "stat": "no hidden deductions"
+      },
+      "02": {
+        "title": "Weekly payments",
+        "body": "Get paid every week, directly to your account. No waiting 30 days or more for your money.",
+        "stat": "paid every week"
+      },
+      "03": {
+        "title": "Dedicated support",
+        "body": "A team dedicated to couriers, available 7 days a week. You're never alone on the road.",
+        "stat": "7 days / week"
+      },
+      "04": {
+        "title": "Smart routes",
+        "body": "Fewer km per trip, more deliveries per day. The app calculates the best path in seconds.",
+        "stat": "−18% km driven"
+      }
+    }
+  },
+  "footer": {
+    "description": "Last-mile logistics performance for the growth of your business. Operating in Rio de Janeiro.",
+    "social": "@BoxBoyDelivery",
+    "copyright": "© {year} BoxBoy. All rights reserved.",
+    "columns": {
+      "contact": {
+        "title": "Contact",
+        "location": "Rio de Janeiro · RJ"
+      },
+      "platform": {
+        "title": "Platform",
+        "resources": "Features",
+        "partners": "Partners",
+        "plans": "Plans",
+        "status": "Status"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy",
+        "cookies": "Cookies",
+        "terms": "Terms"
+      }
+    }
+  },
+  "welcomePopup": {
+    "platformBadge": "BoxBoy · Platform",
+    "activeBadge": "platform active",
+    "label": "Welcome",
+    "title": "Everything your operation needs — in a single partnership.",
+    "subtitle": "BoxBoy connects merchants and couriers for instant deliveries across Rio de Janeiro. Discover the features that transform your logistics.",
+    "highlights": {
+      "dispatch": { "label": "Automatic dispatch", "sub": "Assigns in under 3 seconds" },
+      "monitoring": { "label": "Live monitoring", "sub": "Full delivery visibility" },
+      "routes": { "label": "Smart routes", "sub": "Up to 18% fewer km driven" }
+    },
+    "explore": "Explore platform",
+    "close": "Close",
+    "timer": "This notice reappears every 5 minutes",
+    "closeAriaLabel": "Close welcome"
+  },
+  "policyDrawer": {
+    "ariaLabel": "Policies and Terms of Use",
+    "brand": "BoxBoy",
+    "subtitle": "Policies & Terms",
+    "requiredBadge": "required reading",
+    "tabs": {
+      "privacy": "Privacy",
+      "terms": "Terms of Use"
+    },
+    "footer": {
+      "consent": "By continuing to use the BoxBoy platform, you confirm that you have read and agree to our privacy policies and terms of use.",
+      "accept": "Accept and continue",
+      "viewFull": "View full"
+    },
+    "privacy": {
+      "intro": "BoxBoy respects your privacy and is committed to protecting your personal data, in compliance with Brazil's General Data Protection Law (LGPD — Law 13.709/2018).",
+      "s01": {
+        "title": "Data we collect",
+        "p1": "Full name, email, phone and browsing data provided when filling out forms or using our platform.",
+        "p2": "Courier location data during active shifts, exclusively for order dispatching."
+      },
+      "s02": {
+        "title": "Purpose of processing",
+        "p1": "Operating and continuously improving our delivery platform.",
+        "p2": "Commercial and institutional communications, always with an opt-out option.",
+        "p3": "Compliance with legal and regulatory obligations."
+      },
+      "s03": {
+        "title": "Sharing",
+        "p1": "We do not sell your data. We share only with essential operational partners (payment processors, infrastructure providers) under confidentiality agreements."
+      },
+      "s04": {
+        "title": "Your rights",
+        "p1": "Access, correction, portability, deletion and revocation of consent at any time via privacidade@boxboydelivery.com."
+      },
+      "s05": {
+        "title": "Retention",
+        "p1": "Operational data is kept for up to 5 years as required by tax and legal obligations, after the end of the contractual relationship."
+      }
+    },
+    "terms": {
+      "intro": "These Terms govern the use of the BoxBoy platform by merchants and couriers across the national territory.",
+      "s01": {
+        "title": "Eligibility",
+        "p1": "Use restricted to legal entities or individuals over 18 years of age with valid documentation. BoxBoy may refuse or close accounts that violate these terms."
+      },
+      "s02": {
+        "title": "Merchant responsibilities",
+        "p1": "Keep registration information up to date and accurate.",
+        "p2": "Respect delivery deadlines and conditions agreed with end customers.",
+        "p3": "Not use the platform for unlawful purposes."
+      },
+      "s03": {
+        "title": "Courier responsibilities",
+        "p1": "Keep vehicle documentation and license in good standing.",
+        "p2": "Ensure the integrity of packages during transport.",
+        "p3": "Meet the pickup and delivery SLAs defined for each order."
+      },
+      "s04": {
+        "title": "Intellectual property",
+        "p1": "All content, brand and software of BoxBoy are protected by law. Reproduction without express written authorization is prohibited."
+      },
+      "s05": {
+        "title": "Limitation of liability",
+        "p1": "BoxBoy is not liable for indirect losses arising from third-party failures, acts of God or force majeure."
+      },
+      "s06": {
+        "title": "Jurisdiction",
+        "p1": "The courts of Rio de Janeiro – RJ are elected as the competent jurisdiction to settle any disputes arising from these Terms."
+      }
+    }
+  },
+  "institutional": {
+    "back": "Back",
+    "label": "Institutional Center",
+    "title": "Transparency and trust in every detail.",
+    "subtitle": "Policies, terms and legal information from Box Boy Delivery LTDA — updated and in compliance with LGPD.",
+    "updated": "Updated · May 2025",
+    "tabs": {
+      "privacy": { "label": "Privacy", "desc": "Privacy Policy" },
+      "cookies": { "label": "Cookies", "desc": "Cookie Policy" },
+      "terms": { "label": "Terms", "desc": "Terms of Use" },
+      "legal": { "label": "Legal", "desc": "Legal Contact" }
+    }
+  },
+  "privacySection": {
+    "s01": {
+      "title": "What data we collect",
+      "identity": {
+        "title": "Identity",
+        "body": "Full name and email for account creation and management on the platform."
+      },
+      "location": {
+        "title": "Location",
+        "body": "Delivery address and GPS data during active service use."
+      },
+      "payment": {
+        "title": "Payment",
+        "body": "Information processed by certified gateways. Card data is never stored."
+      },
+      "logs": {
+        "title": "Usage logs",
+        "body": "Access and platform usage records for security and audit purposes."
+      }
+    },
+    "s02": {
+      "title": "How we use your data",
+      "items": {
+        "0": "Operate and improve our delivery platform",
+        "1": "Process orders, payments and related communications",
+        "2": "Ensure account security and prevent fraud",
+        "3": "Send essential service notifications",
+        "4": "Comply with legal and regulatory obligations"
+      }
+    },
+    "s03": {
+      "title": "Data sharing",
+      "intro": "We do not sell your data. We may share it only with:",
+      "partners": {
+        "title": "Partner couriers",
+        "body": "Only the information strictly necessary for the execution of the delivery."
+      },
+      "payment": {
+        "title": "Payment processors",
+        "body": "PCI-DSS certified gateways for secure transaction processing."
+      },
+      "authorities": {
+        "title": "Competent authorities",
+        "body": "Only when required by court order or express legal determination."
+      }
+    },
+    "s04": {
+      "title": "Your rights (LGPD)",
+      "intro": "Under the General Data Protection Law (Law no. 13.709/2018):",
+      "rights": {
+        "access": "Access",
+        "correction": "Correction",
+        "deletion": "Deletion",
+        "portability": "Portability",
+        "opposition": "Opposition",
+        "revocation": "Revocation"
+      },
+      "contactNote": "To exercise these rights:"
+    },
+    "s05": {
+      "title": "Retention and security",
+      "securityLabel": "Security",
+      "serversBadge": "Servers · Brazil",
+      "body": "Data is stored on servers with AES-256 encryption, located in Brazil. We retain your data for the minimum period necessary for the processing purpose or as required by applicable law. After that period, data is anonymized or securely deleted."
+    }
+  },
+  "cookiesSection": {
+    "s01": {
+      "title": "Types of cookies we use",
+      "essential": {
+        "name": "Essential",
+        "badge": "Required",
+        "description": "Necessary for the basic functioning of the platform. Cannot be disabled.",
+        "items": {
+          "0": "Welcome pop-up",
+          "1": "Page preferences",
+          "2": "Terms of use accepted"
+        }
+      },
+      "analytics": {
+        "name": "Analytics",
+        "badge": "Optional",
+        "description": "Help us understand how you use the platform to continuously improve it.",
+        "items": {
+          "0": "Google Analytics",
+          "1": "Heatmaps",
+          "2": "Conversion rate"
+        }
+      },
+      "functional": {
+        "name": "Functional",
+        "badge": "Optional",
+        "description": "Enable enhanced features and personalization of the user experience.",
+        "items": {
+          "0": "Preferred language",
+          "1": "Saved location",
+          "2": "Notification settings"
+        }
+      },
+      "marketing": {
+        "name": "Marketing",
+        "badge": "Optional",
+        "description": "Used to display relevant ads. You can refuse these cookies.",
+        "items": {
+          "0": "Facebook Pixel",
+          "1": "Google Ads",
+          "2": "Retargeting"
+        }
+      }
+    },
+    "s02": {
+      "title": "How to manage cookies",
+      "vizLabel": "Full control",
+      "manageLabel": "Manage",
+      "body": "You can control and/or delete cookies as you wish. It is possible to delete all cookies already stored on your computer and configure most browsers to prevent new ones from being added. Keep in mind that if you do this, you may need to manually adjust some preferences on each visit."
+    },
+    "s03": {
+      "title": "Third-party cookies",
+      "pixelTitle": "Facebook Pixel",
+      "body": "We use Facebook Pixel to measure the effectiveness of our marketing campaigns. This cookie is managed by Facebook and is subject to the privacy policy of Meta Platforms, Inc. You can opt out at facebook.com/settings"
+    }
+  },
+  "termsSection": {
+    "title": "Terms of Use",
+    "subtitle": "Box Boy Delivery LTDA · Effective from January 2025",
+    "footerNote": "Questions about the terms?",
+    "articles": {
+      "01": {
+        "title": "Acceptance of Terms",
+        "p1": "By accessing or using the BoxBoy platform, you agree to these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services."
+      },
+      "02": {
+        "title": "Service Description",
+        "intro": "BoxBoy Delivery LTDA offers a SaaS delivery management platform for merchants and autonomous couriers. Our services include:",
+        "items": {
+          "0": "Order and delivery management system for merchants",
+          "1": "App for registered partner couriers",
+          "2": "Administrative panel with reports and metrics",
+          "3": "API for integration with third-party systems"
+        }
+      },
+      "03": {
+        "title": "User Obligations",
+        "intro": "By using our services, you agree to:",
+        "items": {
+          "0": "Provide accurate information and keep your data up to date",
+          "1": "Maintain the confidentiality of your access credentials",
+          "2": "Not use the platform for illegal or fraudulent purposes",
+          "3": "Respect the rights of other users and partners",
+          "4": "Comply with all applicable laws and regulations"
+        }
+      },
+      "04": {
+        "title": "Plans and Payments",
+        "p1": "Subscription plans are charged monthly or annually, as chosen by the user. Cancellation can be done at any time, without penalty, effective at the end of the already-paid period. We do not provide pro-rated refunds for unused periods, except as provided by the Consumer Protection Code."
+      },
+      "05": {
+        "title": "Limitation of Liability",
+        "p1": "Box Delivery is not liable for indirect, incidental or consequential damages arising from the use of the platform. Our total liability is limited to the amount paid by the user in the last 3 (three) months of subscription."
+      },
+      "06": {
+        "title": "Intellectual Property",
+        "p1": "All platform content — including software, logos, texts and interfaces — is the exclusive property of Box Delivery S.A. and protected by Brazilian intellectual property law. Reproduction or unauthorized use of any element is prohibited."
+      },
+      "07": {
+        "title": "Applicable Law and Jurisdiction",
+        "p1": "These Terms are governed by the laws of the Federative Republic of Brazil. The courts of São Paulo/SP are elected to resolve any disputes, with express waiver of any other jurisdiction, however privileged."
+      }
+    }
+  },
+  "legalContactSection": {
+    "s01": {
+      "title": "Legal Department",
+      "subtitle": "Exclusive channels for legal matters, LGPD and formal communications.",
+      "cards": {
+        "legalEmail": {
+          "label": "Legal Email",
+          "sublabel": "Legal and contractual matters",
+          "badge": "Response within 72h"
+        },
+        "lgpdEmail": {
+          "label": "LGPD / DPO Email",
+          "sublabel": "Personal data protection",
+          "badge": "LGPD Officer"
+        },
+        "address": {
+          "label": "Address",
+          "sublabel": "Headquarters",
+          "badge": "Notices · AR"
+        },
+        "cnpj": {
+          "label": "CNPJ",
+          "sublabel": "BoxBoy Delivery LTDA",
+          "badge": "Legal Entity"
+        }
+      }
+    },
+    "s02": {
+      "title": "Extrajudicial Notices",
+      "vizLabel": "Standard deadline",
+      "vizBadge": "via AR · physically",
+      "body": "Extrajudicial notices must be sent to the physical address above, with acknowledgment of receipt (AR), addressed to the Legal Department. The standard response time is 15 business days, as provided by law."
+    },
+    "s03": {
+      "title": "Data Protection Officer",
+      "articleBadge": "Art. 41 · LGPD",
+      "body": "Under Art. 41 of the LGPD, Box Delivery S.A. has designated a Data Protection Officer. To exercise your rights or obtain information about the processing of your data, contact us directly through the LGPD channel:",
+      "notice": {
+        "label": "Important:",
+        "body": "Legal channels are intended exclusively for legal, contractual and data protection matters. For technical or commercial support, please use our regular customer service channels."
+      }
+    }
+  }
+}

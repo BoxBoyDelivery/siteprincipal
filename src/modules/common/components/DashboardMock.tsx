@@ -79,7 +79,7 @@ const DashboardMock = ({ floating = false }: DashboardMockProps): JSX.Element =>
                 <div className="absolute inset-3 grid place-items-center rounded-full bg-white sm:inset-3.5">
                   <div className="text-center">
                     <div className="font-display text-ink tnum text-lg leading-none font-bold">
-                      84%
+                      95%
                     </div>
                     <div className="text-muted mt-0.5 font-mono text-[9px] tracking-wider uppercase">
                       no prazo

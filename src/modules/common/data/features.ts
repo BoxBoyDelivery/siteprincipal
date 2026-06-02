@@ -21,9 +21,9 @@ export const features: Feature[] = [
     Viz: VizRadar,
     icon: BoltIcon,
     num: '01',
-    title: 'Despacho automático',
-    body: 'Envio automático dos pedidos para os motoboys mais próximos. Agilidade e precisão sem intervenção manual.',
-    stat: 'aloca em < 3s',
+    title: 'Despacho Programados',
+    body: 'Envio programado dos pedidos de forma que a agilidade e precisão matem a sua fome.',
+    stat: 'Alocação rápida',
   },
   {
     Viz: VizWave,
@@ -63,6 +63,6 @@ export const features: Feature[] = [
     num: '06',
     title: 'Financeiro integrado',
     body: 'Faturamento em tempo real, conferência simplificada e pagamentos centralizados em um só lugar.',
-    stat: 'fechamento em D+1',
+    stat: 'fechamento semanal',
   },
 ]

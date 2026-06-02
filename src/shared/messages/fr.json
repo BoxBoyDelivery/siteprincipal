@@ -1,0 +1,562 @@
+{
+  "header": {
+    "nav": {
+      "platform": "Plateforme",
+      "partners": "Partenaires",
+      "plans": "Offres",
+      "contact": "Contact"
+    },
+    "institutional": "Institutionnel",
+    "cta": "Devenir partenaire"
+  },
+  "hero": {
+    "badge": "Last-mile · Rio de Janeiro",
+    "title": "Performance logistique pour la croissance de votre entreprise.",
+    "subtitle": "Livraisons intelligentes, dispatch automatique et suivi en temps réel — c'est ce que nous apportons à votre opération. Conçu pour évoluer avec votre marque.",
+    "ctaPrimary": "Devenir partenaire",
+    "ctaSecondary": "Voir la plateforme",
+    "stats": {
+      "stores": "boutiques actives",
+      "orders": "commandes / mois",
+      "support": "support hebdomadaire"
+    }
+  },
+  "marquee": {
+    "label": "Partenaires",
+    "title": "Opération active dans les grandes enseignes de la restauration.",
+    "stat": "+40",
+    "statLabel": "boutiques connectées"
+  },
+  "features": {
+    "label": "Plateforme",
+    "title": "Tout ce dont votre opération a besoin — en un seul partenariat.",
+    "subtitle": "Six fonctionnalités clés qui remplacent les tableurs, les groupes WhatsApp et les opérateurs improvisés.",
+    "items": {
+      "01": {
+        "title": "Dispatch automatique",
+        "body": "Envoi automatique des commandes aux livreurs les plus proches. Rapidité et précision sans intervention manuelle.",
+        "stat": "assigne en < 3s"
+      },
+      "02": {
+        "title": "Suivi en temps réel",
+        "body": "Suivez chaque livraison du départ à l'arrivée. Transparence totale pour vous et votre client final.",
+        "stat": "événements en direct"
+      },
+      "03": {
+        "title": "Optimisation des itinéraires",
+        "body": "L'algorithme choisit automatiquement les meilleurs itinéraires. Économie de temps et d'argent à chaque trajet.",
+        "stat": "−18% km parcourus"
+      },
+      "04": {
+        "title": "Support 7 jours / semaine",
+        "body": "Assistance spécialisée tous les jours de la semaine. Votre opération ne s'arrête jamais — la nôtre non plus.",
+        "stat": "en ligne · 24/7"
+      },
+      "05": {
+        "title": "Intégrations",
+        "body": "Une seule plateforme intégrée aux plus grands menus numériques et systèmes de caisse du marché.",
+        "stat": "+15 connecteurs"
+      },
+      "06": {
+        "title": "Financier intégré",
+        "body": "Facturation en temps réel, rapprochement simplifié et paiements centralisés en un seul endroit.",
+        "stat": "clôture en J+1"
+      }
+    }
+  },
+  "showcase": {
+    "label": "Suivi en temps réel",
+    "title": "Nous pilotons toute notre opération, en temps réel.",
+    "subtitle": "Visualisant chaque commande, chaque livreur et chaque itinéraire de votre opération à Rio de Janeiro. Événements en secondes, pas dans des tableurs. Décisions fondées sur les données, pas sur l'intuition.",
+    "bullets": {
+      "0": "Carte en direct avec marqueurs par statut de livraison",
+      "1": "Graphique de répartition : dans les délais / en route / en retard",
+      "2": "Liste de commandes avec SLA, ETA et itinéraire complet",
+      "3": "Historique exportable par jour, boutique ou livreur"
+    }
+  },
+  "dashboard": {
+    "kpi": {
+      "inRoute": "En route",
+      "completed": "Terminées",
+      "slaAvg": "SLA moyen"
+    },
+    "donut": {
+      "title": "Répartition",
+      "today": "aujourd'hui",
+      "center": "dans les délais",
+      "onTime": "Dans les délais",
+      "inRoute": "En route",
+      "delayed": "Retard"
+    },
+    "orders": {
+      "onTheWay": "En chemin",
+      "collected": "Récupéré"
+    }
+  },
+  "pricing": {
+    "label": "Commercial",
+    "title": "Tarifs commerciaux, sans mauvaises surprises.",
+    "subtitle": "Prix par moto dans votre boutique + frais par km. Simple à calculer, facile à faire évoluer.",
+    "col1": {
+      "pill": "Fixe garanti · 6 heures",
+      "title": "Commandes par moto en boutique",
+      "row1": { "label": "Lun – Jeu", "caption": "Jours ouvrables", "unit": "commandes" },
+      "row2": { "label": "Ven – Dim", "caption": "Week-end", "unit": "commandes" }
+    },
+    "col2": {
+      "pill": "Frais de livraison par km",
+      "title": "Coût de la course",
+      "row1": { "label": "0 à 3 km", "caption": "Tranche initiale" },
+      "row2": { "label": "au-delà de 3 km", "caption": "Supplément par km" }
+    },
+    "notes": {
+      "rain": {
+        "label": "Pluie / forte demande",
+        "body": "+ R$ 2,00 par commande pendant les périodes signalées par l'opération."
+      },
+      "civilDefense": {
+        "label": "Alerte de la Défense Civile",
+        "body": "+ R$ 4,00 par commande pendant la durée de l'alerte officielle."
+      },
+      "meal": {
+        "label": "Repas par shift",
+        "body": "Repas du livreur par shift à la charge du client. Au-delà de 5 000 commandes/mois, nous recommandons un responsable opérationnel sur place."
+      }
+    },
+    "cta": {
+      "text": "Vous voulez simuler votre tableau avec un volume réel ? On le construit avec vous.",
+      "button": "Parler à l'équipe commerciale"
+    }
+  },
+  "leadForm": {
+    "label": "Commercial",
+    "title": "Élevons la performance de votre opération.",
+    "subtitle": "Parlez-nous un peu de votre boutique et notre équipe commerciale vous contactera sous 1 jour ouvrable. Pas de promesses vides, pas d'appels intempestifs.",
+    "benefits": {
+      "0": "Réponse sous 1 jour ouvrable",
+      "1": "Sans engagement pendant les 30 premiers jours",
+      "2": "Configuration technique assistée"
+    },
+    "subjects": {
+      "0": "Devenir partenaire",
+      "1": "Tarifs commerciaux",
+      "2": "Support",
+      "3": "Autre"
+    },
+    "fields": {
+      "name": { "label": "Nom", "placeholder": "Comment devons-nous vous appeler ?" },
+      "email": { "label": "E-mail", "placeholder": "vous@entreprise.com" },
+      "phone": { "label": "Téléphone", "placeholder": "+33 (0)0 00 00 00 00" },
+      "subject": { "label": "Sujet" }
+    },
+    "errors": {
+      "name": "Veuillez indiquer votre nom.",
+      "email": "E-mail invalide.",
+      "phone": "Numéro de téléphone invalide."
+    },
+    "submit": {
+      "idle": "Envoyer",
+      "loading": "Envoi en cours…",
+      "error": "L'envoi a échoué. Veuillez réessayer dans un instant."
+    },
+    "consent": "En envoyant, vous acceptez nos conditions générales et notre politique de confidentialité.",
+    "success": {
+      "title": "Reçu. Merci.",
+      "body": "Notre équipe commerciale vous appellera au {phone} sous 1 jour ouvrable.",
+      "reset": "Envoyer un autre message"
+    }
+  },
+  "benefits": {
+    "label": "Avantages",
+    "title": "Des avantages concrets pour ceux qui font la livraison.",
+    "subtitle": "Que vous soyez propriétaire de boutique ou livreur partenaire — BoxBoy a été conçue en pensant au succès de chacun.",
+    "tabs": {
+      "merchants": "Commerçants",
+      "couriers": "Livreurs"
+    },
+    "cardFooter": "avantage",
+    "merchants": {
+      "01": {
+        "title": "Zéro abonnement fixe",
+        "body": "Payez uniquement pour les livraisons effectuées. Sans frais cachés, sans surprises en fin de mois.",
+        "stat": "sans abonnement"
+      },
+      "02": {
+        "title": "Plus de commandes livrées",
+        "body": "Des livreurs toujours disponibles réduisent les annulations et augmentent le taux de conversion de votre boutique.",
+        "stat": "+32% conversion"
+      },
+      "03": {
+        "title": "Rapports en temps réel",
+        "body": "Tableau de bord complet avec vue des livraisons, des coûts et des performances. Des données qui deviennent des décisions.",
+        "stat": "données en direct"
+      },
+      "04": {
+        "title": "Intégration immédiate",
+        "body": "Connectez votre caisse ou menu numérique en quelques minutes. Sans développement, sans friction, sans attente.",
+        "stat": "< 10 min de config"
+      }
+    },
+    "couriers": {
+      "01": {
+        "title": "Gains transparents",
+        "body": "Voyez exactement ce que vous gagnerez par course avant d'accepter. Sans déduction surprise à la fin.",
+        "stat": "sans déduction cachée"
+      },
+      "02": {
+        "title": "Paiement hebdomadaire",
+        "body": "Soyez payé chaque semaine, directement sur votre compte. Sans attendre 30 jours ou plus pour avoir votre argent.",
+        "stat": "payé chaque semaine"
+      },
+      "03": {
+        "title": "Support dédié",
+        "body": "Une équipe dédiée aux livreurs, disponible 7 jours sur 7. Vous n'êtes jamais seul sur la route.",
+        "stat": "7 jours / semaine"
+      },
+      "04": {
+        "title": "Itinéraires intelligents",
+        "body": "Moins de km par course, plus de livraisons par jour. L'application calcule le meilleur chemin en quelques secondes.",
+        "stat": "−18% km parcourus"
+      }
+    }
+  },
+  "footer": {
+    "description": "Performance logistique last-mile pour la croissance de votre entreprise. En activité à Rio de Janeiro.",
+    "social": "@BoxBoyDelivery",
+    "copyright": "© {year} BoxBoy. Tous droits réservés.",
+    "columns": {
+      "contact": {
+        "title": "Contact",
+        "location": "Rio de Janeiro · RJ"
+      },
+      "platform": {
+        "title": "Plateforme",
+        "resources": "Fonctionnalités",
+        "partners": "Partenaires",
+        "plans": "Offres",
+        "status": "Statut"
+      },
+      "legal": {
+        "title": "Légal",
+        "privacy": "Confidentialité",
+        "cookies": "Cookies",
+        "terms": "CGU"
+      }
+    }
+  },
+  "welcomePopup": {
+    "platformBadge": "BoxBoy · Plateforme",
+    "activeBadge": "plateforme active",
+    "label": "Bienvenue",
+    "title": "Tout ce dont votre opération a besoin — en un seul partenariat.",
+    "subtitle": "BoxBoy connecte commerçants et livreurs pour des livraisons instantanées dans tout Rio de Janeiro. Découvrez les fonctionnalités qui transforment votre logistique.",
+    "highlights": {
+      "dispatch": { "label": "Dispatch automatique", "sub": "Assigne en moins de 3 secondes" },
+      "monitoring": { "label": "Suivi en direct", "sub": "Visibilité totale de la livraison" },
+      "routes": { "label": "Itinéraires intelligents", "sub": "Jusqu'à 18% de km en moins" }
+    },
+    "explore": "Explorer la plateforme",
+    "close": "Fermer",
+    "timer": "Cet avis réapparaît toutes les 5 minutes",
+    "closeAriaLabel": "Fermer l'accueil"
+  },
+  "policyDrawer": {
+    "ariaLabel": "Politiques et Conditions d'utilisation",
+    "brand": "BoxBoy",
+    "subtitle": "Politiques & CGU",
+    "requiredBadge": "lecture obligatoire",
+    "tabs": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions d'utilisation"
+    },
+    "footer": {
+      "consent": "En continuant à naviguer sur la plateforme BoxBoy, vous confirmez avoir lu et accepté nos politiques de confidentialité et conditions d'utilisation.",
+      "accept": "Accepter et continuer",
+      "viewFull": "Voir en entier"
+    },
+    "privacy": {
+      "intro": "BoxBoy respecte votre vie privée et s'engage à protéger vos données personnelles, conformément à la loi brésilienne sur la protection des données personnelles (LGPD — Loi 13.709/2018).",
+      "s01": {
+        "title": "Données que nous collectons",
+        "p1": "Nom complet, e-mail, téléphone et données de navigation fournis lors du remplissage de formulaires ou de l'utilisation de notre plateforme.",
+        "p2": "Données de localisation du livreur pendant le shift actif, exclusivement pour le dispatch des commandes."
+      },
+      "s02": {
+        "title": "Finalité du traitement",
+        "p1": "Faire fonctionner et améliorer continuellement notre plateforme de livraison.",
+        "p2": "Communications commerciales et institutionnelles, toujours avec option de désinscription.",
+        "p3": "Respect des obligations légales et réglementaires."
+      },
+      "s03": {
+        "title": "Partage",
+        "p1": "Nous ne vendons pas vos données. Nous les partageons uniquement avec des partenaires opérationnels essentiels (processeurs de paiement, fournisseurs d'infrastructure) dans le cadre de contrats de confidentialité."
+      },
+      "s04": {
+        "title": "Vos droits",
+        "p1": "Accès, rectification, portabilité, suppression et révocation du consentement à tout moment via privacidade@boxboydelivery.com."
+      },
+      "s05": {
+        "title": "Conservation",
+        "p1": "Les données opérationnelles sont conservées jusqu'à 5 ans conformément aux exigences fiscales et légales, après la fin de la relation contractuelle."
+      }
+    },
+    "terms": {
+      "intro": "Ces Conditions régissent l'utilisation de la plateforme BoxBoy par les commerçants et les livreurs sur le territoire national.",
+      "s01": {
+        "title": "Éligibilité",
+        "p1": "Utilisation réservée aux personnes morales ou physiques de plus de 18 ans disposant de documents valides. BoxBoy peut refuser ou clôturer des comptes qui ne respectent pas ces conditions."
+      },
+      "s02": {
+        "title": "Responsabilités du commerçant",
+        "p1": "Maintenir les informations d'enregistrement à jour et exactes.",
+        "p2": "Respecter les délais et conditions de livraison convenus avec les clients finaux.",
+        "p3": "Ne pas utiliser la plateforme à des fins illicites."
+      },
+      "s03": {
+        "title": "Responsabilités du livreur",
+        "p1": "Maintenir les documents du véhicule et le permis de conduire en règle.",
+        "p2": "Garantir l'intégrité des colis pendant le transport.",
+        "p3": "Respecter les SLA de collecte et de livraison définis pour chaque commande."
+      },
+      "s04": {
+        "title": "Propriété intellectuelle",
+        "p1": "Tout le contenu, la marque et les logiciels de BoxBoy sont protégés par la loi. Toute reproduction sans autorisation écrite expresse est interdite."
+      },
+      "s05": {
+        "title": "Limitation de responsabilité",
+        "p1": "BoxBoy n'est pas responsable des pertes indirectes résultant de défaillances de tiers, de cas fortuits ou de force majeure."
+      },
+      "s06": {
+        "title": "Juridiction",
+        "p1": "Le tribunal de la Comarca de Rio de Janeiro – RJ est élu comme juridiction compétente pour résoudre tout litige découlant des présentes Conditions."
+      }
+    }
+  },
+  "institutional": {
+    "back": "Retour",
+    "label": "Centre Institutionnel",
+    "title": "Transparence et confiance dans chaque détail.",
+    "subtitle": "Politiques, conditions et informations juridiques de Box Boy Delivery LTDA — mises à jour et conformes à la LGPD.",
+    "updated": "Mis à jour · Mai 2025",
+    "tabs": {
+      "privacy": { "label": "Confidentialité", "desc": "Politique de confidentialité" },
+      "cookies": { "label": "Cookies", "desc": "Politique de cookies" },
+      "terms": { "label": "CGU", "desc": "Conditions d'utilisation" },
+      "legal": { "label": "Juridique", "desc": "Contact juridique" }
+    }
+  },
+  "privacySection": {
+    "s01": {
+      "title": "Quelles données nous collectons",
+      "identity": {
+        "title": "Identité",
+        "body": "Nom complet et e-mail pour la création et la gestion de votre compte sur la plateforme."
+      },
+      "location": {
+        "title": "Localisation",
+        "body": "Adresse de livraison et données GPS pendant l'utilisation active du service."
+      },
+      "payment": {
+        "title": "Paiement",
+        "body": "Informations traitées par des passerelles certifiées. Les données de carte ne sont jamais stockées."
+      },
+      "logs": {
+        "title": "Journaux d'utilisation",
+        "body": "Enregistrements d'accès et d'utilisation de la plateforme à des fins de sécurité et d'audit."
+      }
+    },
+    "s02": {
+      "title": "Comment nous utilisons vos données",
+      "items": {
+        "0": "Exploiter et améliorer notre plateforme de livraison",
+        "1": "Traiter les commandes, les paiements et les communications associées",
+        "2": "Garantir la sécurité du compte et prévenir la fraude",
+        "3": "Envoyer des notifications essentielles sur le service",
+        "4": "Respecter les obligations légales et réglementaires"
+      }
+    },
+    "s03": {
+      "title": "Partage des données",
+      "intro": "Nous ne vendons pas vos données. Nous pouvons uniquement les partager avec :",
+      "partners": {
+        "title": "Livreurs partenaires",
+        "body": "Uniquement les informations strictement nécessaires à l'exécution de la livraison."
+      },
+      "payment": {
+        "title": "Processeurs de paiement",
+        "body": "Passerelles certifiées PCI-DSS pour le traitement sécurisé des transactions."
+      },
+      "authorities": {
+        "title": "Autorités compétentes",
+        "body": "Uniquement lorsqu'une ordonnance judiciaire ou une détermination légale expresse l'exige."
+      }
+    },
+    "s04": {
+      "title": "Vos droits (LGPD)",
+      "intro": "En vertu de la loi sur la protection des données personnelles (Loi n° 13.709/2018) :",
+      "rights": {
+        "access": "Accès",
+        "correction": "Rectification",
+        "deletion": "Suppression",
+        "portability": "Portabilité",
+        "opposition": "Opposition",
+        "revocation": "Révocation"
+      },
+      "contactNote": "Pour exercer ces droits :"
+    },
+    "s05": {
+      "title": "Conservation et sécurité",
+      "securityLabel": "Sécurité",
+      "serversBadge": "Serveurs · Brésil",
+      "body": "Les données sont stockées sur des serveurs avec chiffrement AES-256, situés au Brésil. Nous conservons vos données pendant la durée minimale nécessaire à la finalité du traitement ou conformément aux exigences légales en vigueur. Passé ce délai, les données sont anonymisées ou supprimées en toute sécurité."
+    }
+  },
+  "cookiesSection": {
+    "s01": {
+      "title": "Types de cookies que nous utilisons",
+      "essential": {
+        "name": "Essentiels",
+        "badge": "Obligatoire",
+        "description": "Nécessaires au fonctionnement de base de la plateforme. Ne peuvent pas être désactivés.",
+        "items": {
+          "0": "Pop-up de bienvenue",
+          "1": "Préférences de la page",
+          "2": "Conditions d'utilisation acceptées"
+        }
+      },
+      "analytics": {
+        "name": "Analytiques",
+        "badge": "Optionnel",
+        "description": "Nous aident à comprendre comment vous utilisez la plateforme pour l'améliorer en continu.",
+        "items": {
+          "0": "Google Analytics",
+          "1": "Cartes de chaleur",
+          "2": "Taux de conversion"
+        }
+      },
+      "functional": {
+        "name": "Fonctionnels",
+        "badge": "Optionnel",
+        "description": "Permettent des fonctionnalités améliorées et la personnalisation de l'expérience utilisateur.",
+        "items": {
+          "0": "Langue préférée",
+          "1": "Localisation enregistrée",
+          "2": "Paramètres de notification"
+        }
+      },
+      "marketing": {
+        "name": "Marketing",
+        "badge": "Optionnel",
+        "description": "Utilisés pour afficher des publicités pertinentes. Vous pouvez refuser ces cookies.",
+        "items": {
+          "0": "Facebook Pixel",
+          "1": "Google Ads",
+          "2": "Reciblage"
+        }
+      }
+    },
+    "s02": {
+      "title": "Comment gérer les cookies",
+      "vizLabel": "Contrôle total",
+      "manageLabel": "Gérer",
+      "body": "Vous pouvez contrôler et/ou supprimer les cookies à votre guise. Il est possible de supprimer tous les cookies déjà stockés sur votre ordinateur et de configurer la plupart des navigateurs pour empêcher l'ajout de nouveaux cookies. Gardez à l'esprit que si vous faites cela, vous devrez peut-être ajuster manuellement certaines préférences à chaque visite."
+    },
+    "s03": {
+      "title": "Cookies tiers",
+      "pixelTitle": "Facebook Pixel",
+      "body": "Nous utilisons Facebook Pixel pour mesurer l'efficacité de nos campagnes marketing. Ce cookie est géré par Facebook et est soumis à la politique de confidentialité de Meta Platforms, Inc. Vous pouvez vous désinscrire sur facebook.com/settings"
+    }
+  },
+  "termsSection": {
+    "title": "Conditions d'utilisation",
+    "subtitle": "Box Boy Delivery LTDA · En vigueur depuis janvier 2025",
+    "footerNote": "Des questions sur les conditions ?",
+    "articles": {
+      "01": {
+        "title": "Acceptation des conditions",
+        "p1": "En accédant ou en utilisant la plateforme BoxBoy, vous acceptez ces Conditions générales. Si vous n'acceptez pas une partie de ces conditions, vous ne devez pas utiliser nos services."
+      },
+      "02": {
+        "title": "Description du service",
+        "intro": "BoxBoy Delivery LTDA propose une plateforme SaaS de gestion des livraisons pour les commerçants et les livreurs indépendants. Nos services incluent :",
+        "items": {
+          "0": "Système de gestion des commandes et livraisons pour les commerçants",
+          "1": "Application pour les livreurs partenaires enregistrés",
+          "2": "Panneau d'administration avec rapports et indicateurs",
+          "3": "API pour l'intégration avec des systèmes tiers"
+        }
+      },
+      "03": {
+        "title": "Obligations de l'utilisateur",
+        "intro": "En utilisant nos services, vous vous engagez à :",
+        "items": {
+          "0": "Fournir des informations exactes et maintenir vos données à jour",
+          "1": "Maintenir la confidentialité de vos identifiants de connexion",
+          "2": "Ne pas utiliser la plateforme à des fins illicites ou frauduleuses",
+          "3": "Respecter les droits des autres utilisateurs et partenaires",
+          "4": "Respecter toutes les lois et réglementations applicables"
+        }
+      },
+      "04": {
+        "title": "Offres et paiements",
+        "p1": "Les abonnements sont facturés mensuellement ou annuellement, selon le choix de l'utilisateur. L'annulation peut être effectuée à tout moment, sans pénalité, avec effet à la fin de la période déjà payée. Nous n'effectuons pas de remboursements proportionnels pour les périodes non utilisées, sauf dans les cas prévus par le Code de la consommation."
+      },
+      "05": {
+        "title": "Limitation de responsabilité",
+        "p1": "Box Delivery n'est pas responsable des dommages indirects, accessoires ou consécutifs découlant de l'utilisation de la plateforme. Notre responsabilité totale est limitée au montant payé par l'utilisateur au cours des 3 (trois) derniers mois d'abonnement."
+      },
+      "06": {
+        "title": "Propriété intellectuelle",
+        "p1": "Tout le contenu de la plateforme — y compris les logiciels, logos, textes et interfaces — est la propriété exclusive de Box Delivery S.A. et protégé par la législation brésilienne sur la propriété intellectuelle. Toute reproduction ou utilisation non autorisée d'un élément est interdite."
+      },
+      "07": {
+        "title": "Droit applicable et juridiction",
+        "p1": "Ces conditions sont régies par les lois de la République fédérative du Brésil. Le tribunal de São Paulo/SP est élu pour résoudre tout litige, avec renonciation expresse à toute autre juridiction, aussi privilégiée soit-elle."
+      }
+    }
+  },
+  "legalContactSection": {
+    "s01": {
+      "title": "Département juridique",
+      "subtitle": "Canaux exclusifs pour les questions juridiques, la LGPD et les communications formelles.",
+      "cards": {
+        "legalEmail": {
+          "label": "E-mail juridique",
+          "sublabel": "Questions juridiques et contractuelles",
+          "badge": "Rép. sous 72h"
+        },
+        "lgpdEmail": {
+          "label": "E-mail LGPD / DPO",
+          "sublabel": "Protection des données personnelles",
+          "badge": "Délégué LGPD"
+        },
+        "address": {
+          "label": "Adresse",
+          "sublabel": "Siège social",
+          "badge": "Notifications · AR"
+        },
+        "cnpj": {
+          "label": "CNPJ",
+          "sublabel": "BoxBoy Delivery LTDA",
+          "badge": "Personne morale"
+        }
+      }
+    },
+    "s02": {
+      "title": "Notifications extrajudiciaires",
+      "vizLabel": "Délai standard",
+      "vizBadge": "via AR · physiquement",
+      "body": "Les notifications extrajudiciaires doivent être envoyées à l'adresse physique ci-dessus, avec accusé de réception (AR), à l'attention du Département juridique. Le délai de réponse standard est de 15 jours ouvrables, conformément à la législation en vigueur."
+    },
+    "s03": {
+      "title": "Délégué à la protection des données",
+      "articleBadge": "Art. 41 · LGPD",
+      "body": "Conformément à l'art. 41 de la LGPD, Box Delivery S.A. a désigné un Délégué à la protection des données. Pour exercer vos droits ou obtenir des informations sur le traitement de vos données, contactez-nous directement via le canal LGPD :",
+      "notice": {
+        "label": "Important :",
+        "body": "Les canaux juridiques sont destinés exclusivement aux questions légales, contractuelles et de protection des données. Pour le support technique ou commercial, veuillez utiliser nos canaux habituels de service client."
+      }
+    }
+  }
+}

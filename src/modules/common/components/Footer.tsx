@@ -3,6 +3,7 @@ import type { JSX } from 'react'
 import { FBIcon, IGIcon, INIcon, LogoIcon, YTIcon } from '@/modules/common/icons'
 
 import type { IconComponent } from '@/modules/common/types'
+import { BoxBoyLogo } from '@/modules/common/icons/BoxBoyLogo'
 
 interface FooterColumn {
   title: string
@@ -50,9 +51,8 @@ const Footer = (): JSX.Element => {
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12">
           <div>
-            <a href="#top" className="flex items-center gap-2.5">
-              <LogoIcon className="h-9 w-9" />
-              <span className="font-display text-xl font-bold tracking-tight">BoxBoy</span>
+            <a href="#top" className="group flex items-center" aria-label="BoxBoy">
+              <BoxBoyLogo className="h-8 w-8 md:h-32 md:w-32" />
             </a>
             <p className="mt-5 max-w-[320px] text-[14px] leading-relaxed text-white/55">
               Performance logística last-mile para o crescimento do seu negócio. Operando no Rio de

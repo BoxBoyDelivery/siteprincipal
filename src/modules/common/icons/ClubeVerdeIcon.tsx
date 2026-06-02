@@ -1,6 +1,8 @@
+import type { JSX } from 'react'
+
 import type { IconProps } from '@/modules/common/types'
 
-const ClubeVerdeIcon = (props: IconProps) => (
+const ClubeVerdeIcon = (props: IconProps): JSX.Element => (
   <svg
     width="474"
     height="479"

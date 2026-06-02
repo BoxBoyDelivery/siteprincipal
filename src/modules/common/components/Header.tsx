@@ -5,7 +5,8 @@ import type { JSX } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { useScrolled } from '@/modules/common/hooks/useScrolled'
-import { ArrowIcon, LogoIcon } from '@/modules/common/icons'
+import { ArrowIcon } from '@/modules/common/icons'
+import { BoxBoyLogo } from '@/modules/common/icons/BoxBoyLogo'
 import { scrollToId } from '@/modules/common/utils/form'
 
 const NAV_ITEMS: Array<{ id: string; label: string }> = [
@@ -32,11 +33,8 @@ const Header = (): JSX.Element => {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
-        <a href="#top" className="group flex items-center gap-2.5">
-          <LogoIcon className="h-8 w-8 md:h-9 md:w-9" />
-          <span className="font-display text-lg font-bold tracking-tight text-white md:text-xl">
-            BoxBoy
-          </span>
+        <a href="#top" className="group flex items-center" aria-label="BoxBoy">
+          <BoxBoyLogo className="h-8 w-8 md:h-20 md:w-20" />
         </a>
 
         <nav className="hidden items-center gap-9 text-sm text-white/75 lg:flex">
