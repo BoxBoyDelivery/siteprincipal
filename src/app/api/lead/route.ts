@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
 
   const trimmedMessage = message?.trim() ?? ''
 
-  const from = process.env.EMAIL_FROM ?? 'BoxBoy <onboarding@resend.dev>'
+  const from = process.env.EMAIL_FROM ?? 'BoxBoy <contato@boxboydelivery.com>'
   const contactEmail = process.env.CONTACT_EMAIL ?? 'contato@boxboydelivery.com'
   const firstName = name.split(' ')[0]
 

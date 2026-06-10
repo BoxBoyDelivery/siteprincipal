@@ -16,7 +16,7 @@ import { Showcase } from './components/Showcase'
 const LandingPage = (): JSX.Element => {
   useReveal()
   return (
-    <main className="bg-paper">
+    <main className="bg-paper" suppressHydrationWarning>
       <Header />
       <Hero />
       <Marquee />
