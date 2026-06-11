@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from 'next/script'
 
-import { cn } from '@/utils/cn'
 import { PolicyDrawer } from '@/modules/common/components/PolicyDrawer'
 import { WelcomePopup } from '@/modules/common/components/WelcomePopup'
 import '@/styles/globals.css'
+import { cn } from '@/utils/cn'
 import { inter, jetbrainsMono, spaceGrotesk } from '@/utils/fonts'
 
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ''
@@ -66,6 +68,8 @@ export default function RootLayout({
         {children}
         <WelcomePopup />
         <PolicyDrawer />
+        <Analytics />
+        <SpeedInsights />
         {META_PIXEL_ID && (
           <>
             <Script id="meta-pixel" strategy="afterInteractive">
