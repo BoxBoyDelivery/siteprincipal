@@ -56,12 +56,12 @@ a cidade do **Rio de Janeiro**. A plataforma substitui planilhas, grupos de
 WhatsApp e operadores improvisados por uma única parceria com despacho
 automático, rotas inteligentes e financeiro integrado.
 
-| Métrica | Valor |
-| ------- | ----- |
+| Métrica         | Valor                     |
+| --------------- | ------------------------- |
 | 🏪 Lojas ativas | **+40 marcas conectadas** |
-| 📦 Volume | **+40 mil pedidos / mês** |
-| 🛟 Suporte | **7 dias por semana** |
-| 📍 Cobertura | **Rio de Janeiro · RJ** |
+| 📦 Volume       | **+40 mil pedidos / mês** |
+| 🛟 Suporte      | **7 dias por semana**     |
+| 📍 Cobertura    | **Rio de Janeiro · RJ**   |
 
 > Parceiros que já operam com a BoxBoy: China in Box, La Mole, Domino's,
 > Clube Verde, Los Guacamoles, Spoleto e Koni.
@@ -90,37 +90,37 @@ O projeto é multilíngue por design, com catálogos de mensagens em
 
 ### Core
 
-| Tecnologia | Versão | Por que está aqui |
-| ---------- | ------ | ----------------- |
-| **[Next.js](https://nextjs.org/)** | 16 (App Router) | Framework full-stack React com Server Components, rotas de API e otimizações de _build_. |
-| **[React](https://react.dev/)** | 19 | Biblioteca de UI. O **React Compiler** está habilitado (`reactCompiler: true`) para memoização automática. |
-| **[TypeScript](https://www.typescriptlang.org/)** | 5 | Tipagem estática em modo `strict`, com alias `@/*` apontando para `src/*`. |
+| Tecnologia                                        | Versão          | Por que está aqui                                                                                          |
+| ------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------- |
+| **[Next.js](https://nextjs.org/)**                | 16 (App Router) | Framework full-stack React com Server Components, rotas de API e otimizações de _build_.                   |
+| **[React](https://react.dev/)**                   | 19              | Biblioteca de UI. O **React Compiler** está habilitado (`reactCompiler: true`) para memoização automática. |
+| **[TypeScript](https://www.typescriptlang.org/)** | 5               | Tipagem estática em modo `strict`, com alias `@/*` apontando para `src/*`.                                 |
 
 ### Estilização & UI
 
-| Tecnologia | Função |
-| ---------- | ------ |
-| **[Tailwind CSS v4](https://tailwindcss.com/)** | Estilização _utility-first_ com configuração _CSS-first_ (`@theme inline`) e _design tokens_ próprios da BoxBoy (`ink`, `paper`, paleta `amber`). |
-| **[shadcn/ui](https://ui.shadcn.com/)** | Base de componentes (`components.json`, estilo `radix-mira`). |
-| **[Hugeicons](https://hugeicons.com/)** | Biblioteca de ícones (`@hugeicons/react`). |
-| **CVA · clsx · tailwind-merge · tailwind-variants** | Composição de classes e variantes de componentes sem conflito. |
-| **next/font** | Fontes **Inter** (sans), **Space Grotesk** (display) e **JetBrains Mono** (mono). |
+| Tecnologia                                          | Função                                                                                                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **[Tailwind CSS v4](https://tailwindcss.com/)**     | Estilização _utility-first_ com configuração _CSS-first_ (`@theme inline`) e _design tokens_ próprios da BoxBoy (`ink`, `paper`, paleta `amber`). |
+| **[shadcn/ui](https://ui.shadcn.com/)**             | Base de componentes (`components.json`, estilo `radix-mira`).                                                                                     |
+| **[Hugeicons](https://hugeicons.com/)**             | Biblioteca de ícones (`@hugeicons/react`).                                                                                                        |
+| **CVA · clsx · tailwind-merge · tailwind-variants** | Composição de classes e variantes de componentes sem conflito.                                                                                    |
+| **next/font**                                       | Fontes **Inter** (sans), **Space Grotesk** (display) e **JetBrains Mono** (mono).                                                                 |
 
 ### Back-end & integrações
 
-| Tecnologia | Função |
-| ---------- | ------ |
+| Tecnologia                                                              | Função                                                                                                          |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | **[Resend](https://resend.com/) + [React Email](https://react.email/)** | Envio de e-mails transacionais a partir do _route handler_ `POST /api/lead`, com _templates_ escritos em React. |
-| **[Vercel Analytics](https://vercel.com/analytics) + Speed Insights** | Métricas de tráfego e _Core Web Vitals_ em produção. |
-| **Meta Pixel** | Rastreamento de conversões (opcional, ativado por variável de ambiente). |
+| **[Vercel Analytics](https://vercel.com/analytics) + Speed Insights**   | Métricas de tráfego e _Core Web Vitals_ em produção.                                                            |
+| **Meta Pixel**                                                          | Rastreamento de conversões (opcional, ativado por variável de ambiente).                                        |
 
 ### Qualidade & tooling
 
-| Ferramenta | Função |
-| ---------- | ------ |
-| **ESLint 9** | _Linting_ com `eslint-config-next` (Core Web Vitals + TypeScript). |
+| Ferramenta     | Função                                                              |
+| -------------- | ------------------------------------------------------------------- |
+| **ESLint 9**   | _Linting_ com `eslint-config-next` (Core Web Vitals + TypeScript).  |
 | **Prettier 3** | Formatação, com `prettier-plugin-tailwindcss` para ordenar classes. |
-| **pnpm** | Gerenciador de pacotes (rápido e eficiente em disco). |
+| **pnpm**       | Gerenciador de pacotes (rápido e eficiente em disco).               |
 
 ---
 
@@ -207,25 +207,25 @@ Acesse **[http://localhost:3000](http://localhost:3000)** no navegador. 🎉
 
 Crie um arquivo `.env.local` na raiz com base no `.env.example`:
 
-| Variável | Obrigatória | Descrição |
-| -------- | :---------: | --------- |
-| `NEXT_PUBLIC_BASE_URL` | Recomendada | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
-| `NEXT_PUBLIC_META_PIXEL_ID` | Opcional | ID do Meta Pixel. Se ausente, o Pixel não é carregado. |
-| `RESEND_API_KEY` | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads. |
-| `EMAIL_FROM` | Opcional | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`. |
-| `CONTACT_EMAIL` | Opcional | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`. |
-| `GOOGLE_SITE_VERIFICATION` | Opcional | Token do Google Search Console (método "tag HTML"). Defina só em produção. |
+| Variável                    |   Obrigatória    | Descrição                                                                           |
+| --------------------------- | :--------------: | ----------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`      |   Recomendada    | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
+| `NEXT_PUBLIC_META_PIXEL_ID` |     Opcional     | ID do Meta Pixel. Se ausente, o Pixel não é carregado.                              |
+| `RESEND_API_KEY`            | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads.                                     |
+| `EMAIL_FROM`                |     Opcional     | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`.               |
+| `CONTACT_EMAIL`             |     Opcional     | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`.                    |
+| `GOOGLE_SITE_VERIFICATION`  |     Opcional     | Token do Google Search Console (método "tag HTML"). Defina só em produção.          |
 
 ---
 
 ## 📜 Scripts disponíveis
 
-| Comando | Descrição |
-| ------- | --------- |
-| `pnpm dev` | Inicia o servidor de desenvolvimento (`localhost:3000`). |
-| `pnpm build` | Gera o _build_ de produção. |
-| `pnpm start` | Sobe o servidor de produção (após o `build`). |
-| `pnpm lint` | Executa o ESLint em todo o projeto. |
+| Comando      | Descrição                                                |
+| ------------ | -------------------------------------------------------- |
+| `pnpm dev`   | Inicia o servidor de desenvolvimento (`localhost:3000`). |
+| `pnpm build` | Gera o _build_ de produção.                              |
+| `pnpm start` | Sobe o servidor de produção (após o `build`).            |
+| `pnpm lint`  | Executa o ESLint em todo o projeto.                      |
 
 ---
 
