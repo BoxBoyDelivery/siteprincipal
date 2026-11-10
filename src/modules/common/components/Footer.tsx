@@ -38,11 +38,11 @@ const COLUMNS: FooterColumn[] = [
   },
 ]
 
-const SOCIAL: Array<{ Icon: IconComponent; label: string }> = [
-  { Icon: IGIcon, label: 'Instagram' },
-  { Icon: FBIcon, label: 'Facebook' },
-  { Icon: INIcon, label: 'LinkedIn' },
-  { Icon: YTIcon, label: 'YouTube' },
+const SOCIAL: Array<{ Icon: IconComponent; label: string; href: string }> = [
+  { Icon: IGIcon, label: 'Instagram', href: 'https://www.instagram.com/boxboydelivery' },
+  // { Icon: FBIcon, label: 'Facebook', href: '#' },
+  // { Icon: INIcon, label: 'LinkedIn', href: '#' },
+  // { Icon: YTIcon, label: 'YouTube', href: '#' },
 ]
 
 const Footer = (): JSX.Element => {
@@ -59,11 +59,13 @@ const Footer = (): JSX.Element => {
               Janeiro.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              {SOCIAL.map(({ Icon, label }) => (
+              {SOCIAL.map(({ Icon, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
                   aria-label={label}
+                  rel="noopener noreferrer"
+                  target="_blank"
                   className="hover:text-ink hover:border-amber2 hover:bg-amber2 grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-white/70 transition"
                 >
                   <Icon className="h-4 w-4" />
