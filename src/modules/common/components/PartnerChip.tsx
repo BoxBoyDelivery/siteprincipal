@@ -35,7 +35,7 @@ const PartnerChip = ({ slot }: PartnerChipProps): JSX.Element => {
       title={slot.label}
       className={cn(
         'border-line group flex h-18 w-50 shrink-0 items-center justify-center rounded-2xl border bg-white px-7 select-none',
-        slot.chipClassName,
+        slot.chipClassName
       )}
     >
       {Logo ? (

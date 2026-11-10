@@ -1,0 +1,65 @@
+# Validação de qualidade dos PRs. Repositório público: os minutos dos runners
+# padrão do GitHub são gratuitos, mas o job é enxuto mesmo assim (um único
+# job, cache do pnpm e do Next, cancelamento de execuções superadas).
+name: Qualidade
+
+on:
+  pull_request:
+    branches: [develop, main]
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+# Um novo push no mesmo PR cancela a execução anterior.
+concurrency:
+  group: qualidade-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    name: Lint, formatação e build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.18.0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Formatação (Prettier)
+        run: pnpm exec prettier --check .
+
+      - name: Lint (ESLint)
+        run: pnpm lint
+
+      - name: Cache do build do Next
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('src/**') }}
+          restore-keys: |
+            next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+
+      # Inclui a checagem de tipos do TypeScript. Sem variáveis de ambiente:
+      # todas são opcionais para o site renderizar.
+      - name: Build
+        run: pnpm build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
+      # Só falha com vulnerabilidade alta ou crítica em dependências de produção.
+      - name: Auditoria de dependências
+        run: pnpm audit --prod --audit-level=high

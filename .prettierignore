@@ -3,7 +3,7 @@ node_modules
 .pnp
 .pnp.js
 
-# Build e的输出
+# Build e saída
 .next
 out
 dist
@@ -45,3 +45,9 @@ coverage
 
 # Next.js
 cache
+# Gerado pelo pnpm
+pnpm-lock.yaml
+
+# Usam aspas duplas e ponto e vírgula por convenção (ver CLAUDE.md)
+next.config.ts
+eslint.config.mjs
