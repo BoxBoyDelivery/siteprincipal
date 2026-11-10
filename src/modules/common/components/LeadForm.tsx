@@ -6,6 +6,7 @@ import { SubjectSelect } from '@/modules/common/components/SubjectSelect'
 import { ArrowIcon, CheckIcon } from '@/modules/common/icons'
 import type { Errors, LeadField, Touched } from '@/modules/common/types'
 import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/form'
+import { trackLead } from '@/shared/analytics/track'
 
 const SUBJECTS: string[] = ['Quero ser parceiro', 'Tabela comercial', 'Suporte', 'Outro']
 
@@ -49,6 +50,7 @@ const LeadForm = (): JSX.Element => {
         body: JSON.stringify({ name, email, phone, subject, message }),
       })
       if (!res.ok) throw new Error('server_error')
+      trackLead(subject)
       setDone(true)
     } catch {
       setSubmitError('Não foi possível enviar. Tente novamente em instantes.')
