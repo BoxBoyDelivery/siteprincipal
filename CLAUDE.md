@@ -76,13 +76,14 @@ The charts on the landing page are hand-written SVG components in `feature-viz/`
 
 Copy `.env.example` to `.env.local`. All variables are optional for the site to render.
 
-| Variable                      | Used for                                                                    |
-| ----------------------------- | --------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_BASE_URL`        | Canonical domain for metadata, sitemap and JSON-LD                          |
-| `NEXT_PUBLIC_META_PIXEL_ID`   | Meta Pixel; the script is only injected when set                            |
-| `GOOGLE_SITE_VERIFICATION`    | Search Console meta tag; set only in production                             |
-| `RESEND_API_KEY`              | Required for `/api/lead` to send e-mail                                     |
-| `EMAIL_FROM`, `CONTACT_EMAIL` | Sender and internal recipient; both default to `contato@boxboydelivery.com` |
+| Variable                      | Used for                                                                          |
+| ----------------------------- | --------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`        | Canonical domain for metadata, sitemap and JSON-LD                                |
+| `NEXT_PUBLIC_META_PIXEL_ID`   | Meta Pixel; the script is only injected when set                                  |
+| `NEXT_PUBLIC_GTM_ID`          | Google Tag Manager container; set only in production. Do not add the Pixel in GTM |
+| `GOOGLE_SITE_VERIFICATION`    | Search Console meta tag; set only in production                                   |
+| `RESEND_API_KEY`              | Required for `/api/lead` to send e-mail                                           |
+| `EMAIL_FROM`, `CONTACT_EMAIL` | Sender and internal recipient; both default to `contato@boxboydelivery.com`       |
 
 ## Code style
 
