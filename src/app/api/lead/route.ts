@@ -5,9 +5,16 @@ import { Resend } from 'resend'
 import { LeadNotificationEmail } from '@/modules/common/emails/LeadNotificationEmail'
 import { LeadThankYouEmail } from '@/modules/common/emails/LeadThankYouEmail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
+  // Criado por requisição: instanciar no topo do módulo exige a chave já no
+  // build (o Next avalia a rota ao coletar a configuração) e quebra o CI.
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.error('RESEND_API_KEY ausente: /api/lead não consegue enviar e-mail.')
+    return Response.json({ error: 'Envio indisponível no momento.' }, { status: 503 })
+  }
+  const resend = new Resend(apiKey)
+
   const body = await request.json()
   const { name, email, phone, subject, message } = body as {
     name: string
