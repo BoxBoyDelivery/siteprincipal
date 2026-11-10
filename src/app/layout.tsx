@@ -1,57 +1,82 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Script from 'next/script'
 
 import { PolicyDrawer } from '@/modules/common/components/PolicyDrawer'
 import { WelcomePopup } from '@/modules/common/components/WelcomePopup'
+import { JsonLd } from '@/shared/seo/JsonLd'
+import { organizationSchema, websiteSchema } from '@/shared/seo/schema'
+import { OG_IMAGE, SITE, SITE_URL } from '@/shared/seo/site'
 import '@/styles/globals.css'
 import { cn } from '@/utils/cn'
 import { inter, jetbrainsMono, spaceGrotesk } from '@/utils/fonts'
 
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ''
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://boxboydelivery.com'
+const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim()
+
+export const viewport: Viewport = {
+  themeColor: SITE.themeColor,
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'BoxBoy — Entregas ultrarrápidas com as melhores taxas',
-    template: '%s | BoxBoy',
+    default: SITE.title,
+    template: `%s | ${SITE.name}`,
   },
+  description: SITE.description,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name, url: SITE_URL }],
+  creator: SITE.name,
+  publisher: SITE.legalName,
+  category: 'business',
+
+  // Canonical da home. Cada página declara o seu — sem isso ela herdaria este
+  // e diria ao Google que é uma cópia de `/`.
+  alternates: { canonical: '/' },
+
+  // O favicon era o PNG da marca em 4375×4375 (4,5 MB), baixado em toda visita.
   icons: {
-    icon: '/assets/boxboy-logo.png',
+    icon: [
+      { url: '/assets/boxboy.ico', sizes: 'any' },
+      { url: '/assets/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [{ url: '/assets/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
-  description:
-    'A BoxBoy conecta lojistas e entregadores para entregas instant delivery, same-day e next-day em todo a cidade do Rio de Janeiro. Mais de 1 milhão de entregas ao mês.',
-  keywords: ['delivery', 'entrega', 'lojista', 'entregador', 'box boy', 'entregas rápidas'],
-  authors: [{ name: 'BoxBoy' }],
-  creator: 'BoxBoy',
+
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
-    url: BASE_URL,
-    siteName: 'BoxBoy',
-    title: 'BoxBoy — Entregas ultrarrápidas com as melhores taxas',
-    description:
-      'Conectamos lojistas e entregadores com entregas rápidas em toda a cidade do Rio de Janeiro.',
-    images: [
-      {
-        url: `${BASE_URL}/assets/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'BoxBoy — Entregas ultrarrápidas com as melhores taxas',
-      },
-    ],
+    locale: SITE.locale,
+    url: '/',
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.shortDescription,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BoxBoy — Entregas ultrarrápidas',
-    description:
-      'Conectamos lojistas e entregadores com entregas rápidas na cidade do Rio de Janeiro.',
-    images: [`${BASE_URL}/assets/og-image.png`],
+    title: SITE.title,
+    description: SITE.shortDescription,
+    images: [OG_IMAGE],
   },
-  robots: { index: true, follow: true },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
+  // Posse do domínio no Google Search Console (método "tag HTML"). Sem a
+  // variável nenhuma `<meta>` é emitida.
+  ...(GOOGLE_SITE_VERIFICATION && { verification: { google: GOOGLE_SITE_VERIFICATION } }),
 }
 
 export default function RootLayout({
@@ -61,10 +86,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-BR"
+      lang={SITE.lang}
       className={cn('antialiased', inter.variable, spaceGrotesk.variable, jetbrainsMono.variable)}
     >
       <body className="font-sans">
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
         {children}
         <WelcomePopup />
         <PolicyDrawer />

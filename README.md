@@ -214,6 +214,7 @@ Crie um arquivo `.env.local` na raiz com base no `.env.example`:
 | `RESEND_API_KEY` | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads. |
 | `EMAIL_FROM` | Opcional | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`. |
 | `CONTACT_EMAIL` | Opcional | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`. |
+| `GOOGLE_SITE_VERIFICATION` | Opcional | Token do Google Search Console (método "tag HTML"). Defina só em produção. |
 
 ---
 
