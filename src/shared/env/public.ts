@@ -28,12 +28,17 @@ const schema = z.object({
   NEXT_PUBLIC_GTM_ID: optional(
     z.string().regex(/^GTM-[A-Z0-9]+$/, 'deve ter o formato GTM-XXXXXXX')
   ),
+  /** Site key do Cloudflare Turnstile. Sem ela, o widget não aparece no formulário. */
+  NEXT_PUBLIC_TURNSTILE_SITE_KEY: optional(
+    z.string().regex(/^[0-3]x[\w-]+$/, 'deve ser uma site key do Turnstile (0x...)')
+  ),
 })
 
 const publicEnv = parseEnv(schema, {
   NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   NEXT_PUBLIC_META_PIXEL_ID: process.env.NEXT_PUBLIC_META_PIXEL_ID,
   NEXT_PUBLIC_GTM_ID: process.env.NEXT_PUBLIC_GTM_ID,
+  NEXT_PUBLIC_TURNSTILE_SITE_KEY: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
 })
 
 export { publicEnv }
