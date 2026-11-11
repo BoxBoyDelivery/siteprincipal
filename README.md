@@ -211,10 +211,15 @@ Crie um arquivo `.env.local` na raiz com base no `.env.example`:
 | --------------------------- | :--------------: | ----------------------------------------------------------------------------------- |
 | `NEXT_PUBLIC_BASE_URL`      |   Recomendada    | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
 | `NEXT_PUBLIC_META_PIXEL_ID` |     Opcional     | ID do Meta Pixel. Se ausente, o Pixel não é carregado.                              |
+| `NEXT_PUBLIC_GTM_ID`        |     Opcional     | Container do Google Tag Manager (`GTM-XXXXXXX`). Defina só em produção.             |
 | `RESEND_API_KEY`            | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads.                                     |
 | `EMAIL_FROM`                |     Opcional     | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`.               |
 | `CONTACT_EMAIL`             |     Opcional     | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`.                    |
 | `GOOGLE_SITE_VERIFICATION`  |     Opcional     | Token do Google Search Console (método "tag HTML"). Defina só em produção.          |
+
+As variáveis são validadas com [zod](https://zod.dev) em `src/shared/env`. Valor vazio conta como
+não definido; um valor preenchido mas mal formado (por exemplo, `your_key`) faz o `pnpm build`
+falhar com a lista do que está errado.
 
 ---
 
@@ -235,9 +240,31 @@ O projeto é otimizado para a **[Vercel](https://vercel.com/)** (criadora do Nex
 
 1. Importe o repositório na Vercel.
 2. Configure as variáveis de ambiente no painel do projeto.
-3. O _deploy_ é automático a cada `push` na branch `main`.
+3. O _deploy_ de produção é automático a cada `push` na branch `main`; cada PR ganha um _preview_.
 
 Qualquer plataforma com suporte a Next.js 16 também funciona (`pnpm build && pnpm start`).
+
+---
+
+## 🔀 Fluxo de branches e release
+
+| Branch          | Papel                                                                             |
+| --------------- | --------------------------------------------------------------------------------- |
+| `main`          | Produção. Só recebe PRs de `release/*` (ou `hotfix/*`).                           |
+| `develop`       | Integração. Branch padrão; recebe os PRs de trabalho.                             |
+| `feature/*`     | Trabalho do dia a dia (`feature/`, `fix/`, `ci/`…), sempre a partir de `develop`. |
+| `release/X.Y.Z` | Preparação da versão: sai de `develop` e vai para `main`.                         |
+
+1. **Trabalho** — branch a partir de `develop` → PR para `develop`. O workflow _Qualidade_
+   (Prettier, ESLint, build e `pnpm audit`) precisa passar; merge com _merge commit_.
+2. **Release** — `release/X.Y.Z` a partir de `develop`, com `main` mesclada nela (para não
+   divergir) e o `version` do `package.json` atualizado em `chore(release): versionando a
+release X.Y.Z.` → PR para `main`.
+3. **Pós-merge** — tag `vX.Y.Z` no merge commit de `main`, _GitHub Release_ com as notas e PR
+   de `main` → `develop` para trazer o commit de versão de volta.
+
+Versão em [SemVer](https://semver.org/lang/pt-BR/): `feat` sobe o _minor_; `fix`, `ci`, `docs`
+e afins sobem o _patch_.
 
 ---
 
