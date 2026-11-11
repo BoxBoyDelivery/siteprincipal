@@ -11,6 +11,8 @@ declare global {
 // assunto escolhido: nome, e-mail e telefone nunca saem para terceiros.
 const trackLead = (subject: string): void => {
   try {
+    // Leitura direta (módulo cliente): o valor já foi validado no build por
+    // `@/shared/env/public`, e importar aquele módulo levaria o zod ao bundle.
     if (process.env.NEXT_PUBLIC_GTM_ID) {
       sendGTMEvent({ event: 'generate_lead', lead_subject: subject })
     }

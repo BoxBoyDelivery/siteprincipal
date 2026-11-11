@@ -56,12 +56,12 @@ a cidade do **Rio de Janeiro**. A plataforma substitui planilhas, grupos de
 WhatsApp e operadores improvisados por uma única parceria com despacho
 automático, rotas inteligentes e financeiro integrado.
 
-| Métrica | Valor |
-| ------- | ----- |
+| Métrica         | Valor                     |
+| --------------- | ------------------------- |
 | 🏪 Lojas ativas | **+40 marcas conectadas** |
-| 📦 Volume | **+40 mil pedidos / mês** |
-| 🛟 Suporte | **7 dias por semana** |
-| 📍 Cobertura | **Rio de Janeiro · RJ** |
+| 📦 Volume       | **+40 mil pedidos / mês** |
+| 🛟 Suporte      | **7 dias por semana**     |
+| 📍 Cobertura    | **Rio de Janeiro · RJ**   |
 
 > Parceiros que já operam com a BoxBoy: China in Box, La Mole, Domino's,
 > Clube Verde, Los Guacamoles, Spoleto e Koni.
@@ -90,37 +90,37 @@ O projeto é multilíngue por design, com catálogos de mensagens em
 
 ### Core
 
-| Tecnologia | Versão | Por que está aqui |
-| ---------- | ------ | ----------------- |
-| **[Next.js](https://nextjs.org/)** | 16 (App Router) | Framework full-stack React com Server Components, rotas de API e otimizações de _build_. |
-| **[React](https://react.dev/)** | 19 | Biblioteca de UI. O **React Compiler** está habilitado (`reactCompiler: true`) para memoização automática. |
-| **[TypeScript](https://www.typescriptlang.org/)** | 5 | Tipagem estática em modo `strict`, com alias `@/*` apontando para `src/*`. |
+| Tecnologia                                        | Versão          | Por que está aqui                                                                                          |
+| ------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------- |
+| **[Next.js](https://nextjs.org/)**                | 16 (App Router) | Framework full-stack React com Server Components, rotas de API e otimizações de _build_.                   |
+| **[React](https://react.dev/)**                   | 19              | Biblioteca de UI. O **React Compiler** está habilitado (`reactCompiler: true`) para memoização automática. |
+| **[TypeScript](https://www.typescriptlang.org/)** | 5               | Tipagem estática em modo `strict`, com alias `@/*` apontando para `src/*`.                                 |
 
 ### Estilização & UI
 
-| Tecnologia | Função |
-| ---------- | ------ |
-| **[Tailwind CSS v4](https://tailwindcss.com/)** | Estilização _utility-first_ com configuração _CSS-first_ (`@theme inline`) e _design tokens_ próprios da BoxBoy (`ink`, `paper`, paleta `amber`). |
-| **[shadcn/ui](https://ui.shadcn.com/)** | Base de componentes (`components.json`, estilo `radix-mira`). |
-| **[Hugeicons](https://hugeicons.com/)** | Biblioteca de ícones (`@hugeicons/react`). |
-| **CVA · clsx · tailwind-merge · tailwind-variants** | Composição de classes e variantes de componentes sem conflito. |
-| **next/font** | Fontes **Inter** (sans), **Space Grotesk** (display) e **JetBrains Mono** (mono). |
+| Tecnologia                                          | Função                                                                                                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **[Tailwind CSS v4](https://tailwindcss.com/)**     | Estilização _utility-first_ com configuração _CSS-first_ (`@theme inline`) e _design tokens_ próprios da BoxBoy (`ink`, `paper`, paleta `amber`). |
+| **[shadcn/ui](https://ui.shadcn.com/)**             | Base de componentes (`components.json`, estilo `radix-mira`).                                                                                     |
+| **[Hugeicons](https://hugeicons.com/)**             | Biblioteca de ícones (`@hugeicons/react`).                                                                                                        |
+| **CVA · clsx · tailwind-merge · tailwind-variants** | Composição de classes e variantes de componentes sem conflito.                                                                                    |
+| **next/font**                                       | Fontes **Inter** (sans), **Space Grotesk** (display) e **JetBrains Mono** (mono).                                                                 |
 
 ### Back-end & integrações
 
-| Tecnologia | Função |
-| ---------- | ------ |
+| Tecnologia                                                              | Função                                                                                                          |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | **[Resend](https://resend.com/) + [React Email](https://react.email/)** | Envio de e-mails transacionais a partir do _route handler_ `POST /api/lead`, com _templates_ escritos em React. |
-| **[Vercel Analytics](https://vercel.com/analytics) + Speed Insights** | Métricas de tráfego e _Core Web Vitals_ em produção. |
-| **Meta Pixel** | Rastreamento de conversões (opcional, ativado por variável de ambiente). |
+| **[Vercel Analytics](https://vercel.com/analytics) + Speed Insights**   | Métricas de tráfego e _Core Web Vitals_ em produção.                                                            |
+| **Meta Pixel**                                                          | Rastreamento de conversões (opcional, ativado por variável de ambiente).                                        |
 
 ### Qualidade & tooling
 
-| Ferramenta | Função |
-| ---------- | ------ |
-| **ESLint 9** | _Linting_ com `eslint-config-next` (Core Web Vitals + TypeScript). |
+| Ferramenta     | Função                                                              |
+| -------------- | ------------------------------------------------------------------- |
+| **ESLint 9**   | _Linting_ com `eslint-config-next` (Core Web Vitals + TypeScript).  |
 | **Prettier 3** | Formatação, com `prettier-plugin-tailwindcss` para ordenar classes. |
-| **pnpm** | Gerenciador de pacotes (rápido e eficiente em disco). |
+| **pnpm**       | Gerenciador de pacotes (rápido e eficiente em disco).               |
 
 ---
 
@@ -207,25 +207,30 @@ Acesse **[http://localhost:3000](http://localhost:3000)** no navegador. 🎉
 
 Crie um arquivo `.env.local` na raiz com base no `.env.example`:
 
-| Variável | Obrigatória | Descrição |
-| -------- | :---------: | --------- |
-| `NEXT_PUBLIC_BASE_URL` | Recomendada | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
-| `NEXT_PUBLIC_META_PIXEL_ID` | Opcional | ID do Meta Pixel. Se ausente, o Pixel não é carregado. |
-| `RESEND_API_KEY` | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads. |
-| `EMAIL_FROM` | Opcional | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`. |
-| `CONTACT_EMAIL` | Opcional | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`. |
-| `GOOGLE_SITE_VERIFICATION` | Opcional | Token do Google Search Console (método "tag HTML"). Defina só em produção. |
+| Variável                    |   Obrigatória    | Descrição                                                                           |
+| --------------------------- | :--------------: | ----------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`      |   Recomendada    | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
+| `NEXT_PUBLIC_META_PIXEL_ID` |     Opcional     | ID do Meta Pixel. Se ausente, o Pixel não é carregado.                              |
+| `NEXT_PUBLIC_GTM_ID`        |     Opcional     | Container do Google Tag Manager (`GTM-XXXXXXX`). Defina só em produção.             |
+| `RESEND_API_KEY`            | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads.                                     |
+| `EMAIL_FROM`                |     Opcional     | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`.               |
+| `CONTACT_EMAIL`             |     Opcional     | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`.                    |
+| `GOOGLE_SITE_VERIFICATION`  |     Opcional     | Token do Google Search Console (método "tag HTML"). Defina só em produção.          |
+
+As variáveis são validadas com [zod](https://zod.dev) em `src/shared/env`. Valor vazio conta como
+não definido; um valor preenchido mas mal formado (por exemplo, `your_key`) faz o `pnpm build`
+falhar com a lista do que está errado.
 
 ---
 
 ## 📜 Scripts disponíveis
 
-| Comando | Descrição |
-| ------- | --------- |
-| `pnpm dev` | Inicia o servidor de desenvolvimento (`localhost:3000`). |
-| `pnpm build` | Gera o _build_ de produção. |
-| `pnpm start` | Sobe o servidor de produção (após o `build`). |
-| `pnpm lint` | Executa o ESLint em todo o projeto. |
+| Comando      | Descrição                                                |
+| ------------ | -------------------------------------------------------- |
+| `pnpm dev`   | Inicia o servidor de desenvolvimento (`localhost:3000`). |
+| `pnpm build` | Gera o _build_ de produção.                              |
+| `pnpm start` | Sobe o servidor de produção (após o `build`).            |
+| `pnpm lint`  | Executa o ESLint em todo o projeto.                      |
 
 ---
 
@@ -235,9 +240,31 @@ O projeto é otimizado para a **[Vercel](https://vercel.com/)** (criadora do Nex
 
 1. Importe o repositório na Vercel.
 2. Configure as variáveis de ambiente no painel do projeto.
-3. O _deploy_ é automático a cada `push` na branch `main`.
+3. O _deploy_ de produção é automático a cada `push` na branch `main`; cada PR ganha um _preview_.
 
 Qualquer plataforma com suporte a Next.js 16 também funciona (`pnpm build && pnpm start`).
+
+---
+
+## 🔀 Fluxo de branches e release
+
+| Branch          | Papel                                                                             |
+| --------------- | --------------------------------------------------------------------------------- |
+| `main`          | Produção. Só recebe PRs de `release/*` (ou `hotfix/*`).                           |
+| `develop`       | Integração. Branch padrão; recebe os PRs de trabalho.                             |
+| `feature/*`     | Trabalho do dia a dia (`feature/`, `fix/`, `ci/`…), sempre a partir de `develop`. |
+| `release/X.Y.Z` | Preparação da versão: sai de `develop` e vai para `main`.                         |
+
+1. **Trabalho** — branch a partir de `develop` → PR para `develop`. O workflow _Qualidade_
+   (Prettier, ESLint, build e `pnpm audit`) precisa passar; merge com _merge commit_.
+2. **Release** — `release/X.Y.Z` a partir de `develop`, com `main` mesclada nela (para não
+   divergir) e o `version` do `package.json` atualizado em `chore(release): versionando a
+release X.Y.Z.` → PR para `main`.
+3. **Pós-merge** — tag `vX.Y.Z` no merge commit de `main`, _GitHub Release_ com as notas e PR
+   de `main` → `develop` para trazer o commit de versão de volta.
+
+Versão em [SemVer](https://semver.org/lang/pt-BR/): `feat` sobe o _minor_; `fix`, `ci`, `docs`
+e afins sobem o _patch_.
 
 ---
 

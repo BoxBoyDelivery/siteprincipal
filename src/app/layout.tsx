@@ -7,6 +7,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { PolicyDrawer } from '@/modules/common/components/PolicyDrawer'
 import { WelcomePopup } from '@/modules/common/components/WelcomePopup'
 import { MetaPixel } from '@/shared/analytics/MetaPixel'
+import { publicEnv } from '@/shared/env/public'
+import { serverEnv } from '@/shared/env/server'
 import { JsonLd } from '@/shared/seo/JsonLd'
 import { organizationSchema, websiteSchema } from '@/shared/seo/schema'
 import { OG_IMAGE, SITE, SITE_URL } from '@/shared/seo/site'
@@ -14,12 +16,12 @@ import '@/styles/globals.css'
 import { cn } from '@/utils/cn'
 import { inter, jetbrainsMono, spaceGrotesk } from '@/utils/fonts'
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim()
+const META_PIXEL_ID = publicEnv.NEXT_PUBLIC_META_PIXEL_ID
 // Container do Google Tag Manager (GA4, Google Ads etc. são configurados no
 // painel do GTM). O Meta Pixel fica no código: não crie tag do Pixel no GTM,
 // ou cada PageView/Lead será contado duas vezes.
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID?.trim()
-const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim()
+const GTM_ID = publicEnv.NEXT_PUBLIC_GTM_ID
+const GOOGLE_SITE_VERIFICATION = serverEnv.GOOGLE_SITE_VERIFICATION
 
 export const viewport: Viewport = {
   themeColor: SITE.themeColor,

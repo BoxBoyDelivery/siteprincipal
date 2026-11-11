@@ -19,9 +19,16 @@ pnpm exec prettier --check . # there is no format script; call prettier directly
 pnpm audit                  # dependency advisories
 ```
 
-There is no test suite and no CI workflow. `pnpm build` plus `pnpm lint` is the verification available.
+There is no test suite. `.github/workflows/qualidade.yml` runs Prettier, ESLint, `pnpm build` (with no env vars) and `pnpm audit --prod` on every PR to `develop` or `main` and on pushes to `develop`.
 
-Every push to `main` deploys to production on Vercel. Work on a branch.
+### Branches and releases
+
+Every push to `main` deploys to production on Vercel; every PR gets a preview. `develop` is the default branch.
+
+- Work: branch off `develop` (`feature/…`, `fix/…`), PR into `develop`, merge with a merge commit once CI passes.
+- Release: `release/X.Y.Z` off `develop`, merge `origin/main` into it so the branches don't diverge, bump `version` in `package.json` as `chore(release): versionando a release X.Y.Z.`, PR into `main`.
+- After the release merge: tag `vX.Y.Z` on the `main` merge commit, create the GitHub Release, and PR `main` back into `develop` so it gets the version bump.
+- SemVer: any `feat` bumps the minor; otherwise patch. The README has the same flow in Portuguese.
 
 `pnpm-workspace.yaml` must keep `allowBuilds` as real booleans. pnpm writes the placeholder `set this to true or false` there when a new dependency has a build script, and `pnpm add`/`pnpm update` then exit with `ERR_PNPM_IGNORED_BUILDS` until it is replaced.
 
@@ -64,7 +71,7 @@ The charts on the landing page are hand-written SVG components in `feature-viz/`
 - Next merges metadata shallowly: a page that sets `openGraph` or `twitter` replaces the layout's object entirely, so it must restate `siteName`, `locale` and `images`. `institucional/page.tsx` shows the pattern.
 - `lastModified` in `SITE_ROUTES` is a hand-maintained content date. Update it when the page's content changes.
 - `Organization` and `WebSite` JSON-LD are emitted by the layout; page-specific schemas go in the page. `sameAs` is intentionally absent because the footer's social links are still `#`.
-- `SITE_URL` falls back to `https://boxboydelivery.com` when `NEXT_PUBLIC_BASE_URL` is missing or not a valid http(s) URL.
+- `SITE_URL` falls back to `https://boxboydelivery.com` when `NEXT_PUBLIC_BASE_URL` is unset. An invalid value fails the build (see Environment).
 
 ### Things that look wired but are not
 
@@ -75,6 +82,8 @@ The charts on the landing page are hand-written SVG components in `feature-viz/`
 ## Environment
 
 Copy `.env.example` to `.env.local`. All variables are optional for the site to render.
+
+Variables are validated with zod in `src/shared/env`: `public.ts` for `NEXT_PUBLIC_*`, `server.ts` (guarded by `server-only`) for the rest. Read them through `publicEnv` / `serverEnv`, not `process.env`. Empty values count as unset; a set but malformed value throws when the module is evaluated, so `next build` fails and the Vercel deploy is rejected. A new variable needs an entry in the right schema (and, if public, a literal `process.env.NEXT_PUBLIC_X` line in `public.ts`, since Next only inlines literal reads). Client components read `process.env.NEXT_PUBLIC_*` directly, as `track.ts` does, so zod stays out of the browser bundle.
 
 | Variable                      | Used for                                                                          |
 | ----------------------------- | --------------------------------------------------------------------------------- |
