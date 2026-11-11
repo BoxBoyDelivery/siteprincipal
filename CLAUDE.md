@@ -61,7 +61,7 @@ The charts on the landing page are hand-written SVG components in `feature-viz/`
 
 ### Lead form
 
-`LeadForm.tsx` posts JSON to `POST /api/lead` (`src/app/api/lead/route.ts`), which sends two e-mails through Resend: a notification to `CONTACT_EMAIL` and a thank-you to the address the visitor typed. The templates are React Email components in `modules/common/emails`. The route only checks that the required fields are non-empty; it has no rate limit, captcha or e-mail validation.
+`LeadForm.tsx` posts JSON to `POST /api/lead` (`src/app/api/lead/route.ts`), which sends two e-mails through Resend: a notification to `CONTACT_EMAIL` and a thank-you to the address the visitor typed. The templates are React Email components in `modules/common/emails`. The route validates the body with zod (limits shared with the form through `data/lead.ts`, subject restricted to `LEAD_SUBJECTS`), silently drops submissions that fill the hidden `website` honeypot, and, when `TURNSTILE_SECRET_KEY` is set, requires a Cloudflare Turnstile token verified in `src/shared/security/turnstile.ts` (action `lead`). Rate limiting is not in the code: it is one Vercel WAF rule on `/api/lead`, configured in the Vercel dashboard. The form maps 429/403/400 to their own messages and resets the Turnstile widget after every attempt, since a token is single-use.
 
 ### SEO
 
@@ -85,14 +85,15 @@ Copy `.env.example` to `.env.local`. All variables are optional for the site to 
 
 Variables are validated with zod in `src/shared/env`: `public.ts` for `NEXT_PUBLIC_*`, `server.ts` (guarded by `server-only`) for the rest. Read them through `publicEnv` / `serverEnv`, not `process.env`. Empty values count as unset; a set but malformed value throws when the module is evaluated, so `next build` fails and the Vercel deploy is rejected. A new variable needs an entry in the right schema (and, if public, a literal `process.env.NEXT_PUBLIC_X` line in `public.ts`, since Next only inlines literal reads). Client components read `process.env.NEXT_PUBLIC_*` directly, as `track.ts` does, so zod stays out of the browser bundle.
 
-| Variable                      | Used for                                                                          |
-| ----------------------------- | --------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_BASE_URL`        | Canonical domain for metadata, sitemap and JSON-LD                                |
-| `NEXT_PUBLIC_META_PIXEL_ID`   | Meta Pixel; the script is only injected when set                                  |
-| `NEXT_PUBLIC_GTM_ID`          | Google Tag Manager container; set only in production. Do not add the Pixel in GTM |
-| `GOOGLE_SITE_VERIFICATION`    | Search Console meta tag; set only in production                                   |
-| `RESEND_API_KEY`              | Required for `/api/lead` to send e-mail                                           |
-| `EMAIL_FROM`, `CONTACT_EMAIL` | Sender and internal recipient; both default to `contato@boxboydelivery.com`       |
+| Variable                                                 | Used for                                                                               |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`                                   | Canonical domain for metadata, sitemap and JSON-LD                                     |
+| `NEXT_PUBLIC_META_PIXEL_ID`                              | Meta Pixel; the script is only injected when set                                       |
+| `NEXT_PUBLIC_GTM_ID`                                     | Google Tag Manager container; set only in production. Do not add the Pixel in GTM      |
+| `GOOGLE_SITE_VERIFICATION`                               | Search Console meta tag; set only in production                                        |
+| `RESEND_API_KEY`                                         | Required for `/api/lead` to send e-mail                                                |
+| `EMAIL_FROM`, `CONTACT_EMAIL`                            | Sender and internal recipient; both default to `contato@boxboydelivery.com`            |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` | Cloudflare Turnstile on the lead form; set both or neither (the build fails otherwise) |
 
 ## Code style
 
