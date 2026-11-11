@@ -19,9 +19,16 @@ pnpm exec prettier --check . # there is no format script; call prettier directly
 pnpm audit                  # dependency advisories
 ```
 
-There is no test suite and no CI workflow. `pnpm build` plus `pnpm lint` is the verification available.
+There is no test suite. `.github/workflows/qualidade.yml` runs Prettier, ESLint, `pnpm build` (with no env vars) and `pnpm audit --prod` on every PR to `develop` or `main` and on pushes to `develop`.
 
-Every push to `main` deploys to production on Vercel. Work on a branch.
+### Branches and releases
+
+Every push to `main` deploys to production on Vercel; every PR gets a preview. `develop` is the default branch.
+
+- Work: branch off `develop` (`feature/…`, `fix/…`), PR into `develop`, merge with a merge commit once CI passes.
+- Release: `release/X.Y.Z` off `develop`, merge `origin/main` into it so the branches don't diverge, bump `version` in `package.json` as `chore(release): versionando a release X.Y.Z.`, PR into `main`.
+- After the release merge: tag `vX.Y.Z` on the `main` merge commit, create the GitHub Release, and PR `main` back into `develop` so it gets the version bump.
+- SemVer: any `feat` bumps the minor; otherwise patch. The README has the same flow in Portuguese.
 
 `pnpm-workspace.yaml` must keep `allowBuilds` as real booleans. pnpm writes the placeholder `set this to true or false` there when a new dependency has a build script, and `pnpm add`/`pnpm update` then exit with `ERR_PNPM_IGNORED_BUILDS` until it is replaced.
 
