@@ -1,14 +1,29 @@
 'use client'
 
-import { useMemo, useState, type JSX } from 'react'
+import { useMemo, useRef, useState, type JSX } from 'react'
+
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 
 import { SubjectSelect } from '@/modules/common/components/SubjectSelect'
+import { LEAD_ACTION, LEAD_MESSAGE_MAX, LEAD_SUBJECTS } from '@/modules/common/data/lead'
 import { ArrowIcon, CheckIcon } from '@/modules/common/icons'
 import type { Errors, LeadField, Touched } from '@/modules/common/types'
 import { maskPhone, validateEmail, validatePhone } from '@/modules/common/utils/form'
 import { trackLead } from '@/shared/analytics/track'
 
-const SUBJECTS: string[] = ['Quero ser parceiro', 'Tabela comercial', 'Suporte', 'Outro']
+const SUBJECTS: readonly string[] = LEAD_SUBJECTS
+
+// Validada no build por `@/shared/env/public`. Sem ela o widget não aparece e a
+// rota também não exige token (as duas chaves são definidas juntas).
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+
+/** Mensagem para o visitante conforme o status da resposta de `/api/lead`. */
+const submitErrorMessage = (status: number): string => {
+  if (status === 429) return 'Muitas tentativas seguidas. Aguarde alguns minutos e tente de novo.'
+  if (status === 403) return 'Não conseguimos confirmar que você não é um robô. Tente novamente.'
+  if (status === 400) return 'Confira os campos e tente novamente.'
+  return 'Não foi possível enviar. Tente novamente em instantes.'
+}
 
 const BENEFITS: string[] = [
   'Resposta de um especialista em até 1 dia útil — sem robô, sem fila',
@@ -27,6 +42,10 @@ const LeadForm = (): JSX.Element => {
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  // Honeypot: campo invisível; só bots o preenchem.
+  const [website, setWebsite] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileRef = useRef<TurnstileInstance>(undefined)
 
   const errors: Errors = useMemo(
     () => ({
@@ -41,21 +60,31 @@ const LeadForm = (): JSX.Element => {
   const onSubmit = async () => {
     setTouched({ name: true, email: true, phone: true })
     if (hasError) return
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setSubmitError('Aguarde a verificação anti-robô terminar e envie de novo.')
+      return
+    }
     setSubmitting(true)
     setSubmitError('')
     try {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, subject, message }),
+        body: JSON.stringify({ name, email, phone, subject, message, website, turnstileToken }),
       })
-      if (!res.ok) throw new Error('server_error')
-      trackLead(subject)
-      setDone(true)
+      if (res.ok) {
+        trackLead(subject)
+        setDone(true)
+      } else {
+        setSubmitError(submitErrorMessage(res.status))
+      }
     } catch {
-      setSubmitError('Não foi possível enviar. Tente novamente em instantes.')
+      setSubmitError(submitErrorMessage(0))
     } finally {
       setSubmitting(false)
+      // O token vale um envio só: pede um novo para a próxima tentativa.
+      setTurnstileToken('')
+      turnstileRef.current?.reset()
     }
   }
 
@@ -236,12 +265,48 @@ const LeadForm = (): JSX.Element => {
                     id="lf-msg"
                     className="input min-h-28 resize-y py-3"
                     rows={4}
-                    maxLength={1000}
+                    maxLength={LEAD_MESSAGE_MAX}
                     placeholder="Conte um pouco sobre sua operação, dúvidas ou o que você precisa…"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
+
+                {/* Fora da tela e fora do Tab: pessoas não veem, bots preenchem. */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] h-px w-px overflow-hidden"
+                >
+                  <label htmlFor="lf-website">Site</label>
+                  <input
+                    id="lf-website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                  />
+                </div>
+
+                {TURNSTILE_SITE_KEY && (
+                  // `interaction-only`: invisível para a maioria; só aparece se a
+                  // Cloudflare pedir um clique.
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={TURNSTILE_SITE_KEY}
+                    options={{
+                      action: LEAD_ACTION,
+                      appearance: 'interaction-only',
+                      language: 'pt-br',
+                      size: 'flexible',
+                      theme: 'light',
+                    }}
+                    onSuccess={setTurnstileToken}
+                    onExpire={() => setTurnstileToken('')}
+                    onError={() => setTurnstileToken('')}
+                  />
+                )}
 
                 <button
                   type="button"

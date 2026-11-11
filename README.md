@@ -207,15 +207,17 @@ Acesse **[http://localhost:3000](http://localhost:3000)** no navegador. 🎉
 
 Crie um arquivo `.env.local` na raiz com base no `.env.example`:
 
-| Variável                    |   Obrigatória    | Descrição                                                                           |
-| --------------------------- | :--------------: | ----------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_BASE_URL`      |   Recomendada    | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
-| `NEXT_PUBLIC_META_PIXEL_ID` |     Opcional     | ID do Meta Pixel. Se ausente, o Pixel não é carregado.                              |
-| `NEXT_PUBLIC_GTM_ID`        |     Opcional     | Container do Google Tag Manager (`GTM-XXXXXXX`). Defina só em produção.             |
-| `RESEND_API_KEY`            | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads.                                     |
-| `EMAIL_FROM`                |     Opcional     | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`.               |
-| `CONTACT_EMAIL`             |     Opcional     | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`.                    |
-| `GOOGLE_SITE_VERIFICATION`  |     Opcional     | Token do Google Search Console (método "tag HTML"). Defina só em produção.          |
+| Variável                         |   Obrigatória    | Descrição                                                                           |
+| -------------------------------- | :--------------: | ----------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`           |   Recomendada    | URL base do site (usada em SEO / Open Graph). Padrão: `https://boxboydelivery.com`. |
+| `NEXT_PUBLIC_META_PIXEL_ID`      |     Opcional     | ID do Meta Pixel. Se ausente, o Pixel não é carregado.                              |
+| `NEXT_PUBLIC_GTM_ID`             |     Opcional     | Container do Google Tag Manager (`GTM-XXXXXXX`). Defina só em produção.             |
+| `RESEND_API_KEY`                 | Sim (p/ e-mails) | Chave da API Resend para o formulário de leads.                                     |
+| `EMAIL_FROM`                     |     Opcional     | Remetente dos e-mails. Padrão: `BoxBoy <contato@boxboydelivery.com>`.               |
+| `CONTACT_EMAIL`                  |     Opcional     | Destino interno dos leads. Padrão: `contato@boxboydelivery.com`.                    |
+| `GOOGLE_SITE_VERIFICATION`       |     Opcional     | Token do Google Search Console (método "tag HTML"). Defina só em produção.          |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` |   Recomendada    | Site key do Cloudflare Turnstile (anti-robô do formulário).                         |
+| `TURNSTILE_SECRET_KEY`           |   Recomendada    | Secret do Turnstile. Defina junto com a site key, ou nenhuma das duas.              |
 
 As variáveis são validadas com [zod](https://zod.dev) em `src/shared/env`. Valor vazio conta como
 não definido; um valor preenchido mas mal formado (por exemplo, `your_key`) faz o `pnpm build`
