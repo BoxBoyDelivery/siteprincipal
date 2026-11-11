@@ -4,27 +4,17 @@
  * entre eles.
  */
 
+import { publicEnv } from '@/shared/env/public'
+
 const DEFAULT_SITE_URL = 'https://boxboydelivery.com'
 
 /**
- * `NEXT_PUBLIC_BASE_URL` só vale se for uma URL http(s) de verdade. Um valor
- * de exemplo esquecido no `.env` (`your_key`) derrubava o build em
- * `new URL()` — e, pior, um valor errado viraria o canonical do site inteiro.
+ * Domínio canônico, sem barra final. `www` redireciona para ele.
+ * `NEXT_PUBLIC_BASE_URL` chega validado por `@/shared/env/public` (URL http(s),
+ * já reduzida à origem): um valor errado derruba o build em vez de virar o
+ * canonical do site inteiro.
  */
-const resolveSiteUrl = (): string => {
-  const raw = process.env.NEXT_PUBLIC_BASE_URL?.trim()
-  if (!raw) return DEFAULT_SITE_URL
-
-  try {
-    const { protocol, origin } = new URL(raw)
-    return protocol === 'https:' || protocol === 'http:' ? origin : DEFAULT_SITE_URL
-  } catch {
-    return DEFAULT_SITE_URL
-  }
-}
-
-/** Domínio canônico, sem barra final. `www` redireciona para ele. */
-const SITE_URL = resolveSiteUrl()
+const SITE_URL = publicEnv.NEXT_PUBLIC_BASE_URL ?? DEFAULT_SITE_URL
 
 const SITE = {
   name: 'BoxBoy',
