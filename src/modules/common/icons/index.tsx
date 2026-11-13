@@ -4,11 +4,7 @@ import type { IconProps } from '@/modules/common/types'
 
 /* ── Partners ─────────────────────────────────────────────────────────────── */
 
-export { ChinaInBoxIcon } from './ChinaInBoxIcon'
-export { ClubeVerdeIcon } from './ClubeVerdeIcon'
 export { DominosPizzaIcon } from './DominosPizzaIcon'
-export { KoniIcon } from './KoniIcon'
-export { LaMoleIcon } from './LaMoleIcon'
 export { LosGuacamolesIcon } from './LosGuacamolesIcon'
 export { SpoletoIcon } from './SpoletoIcon'
 

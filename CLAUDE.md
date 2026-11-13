@@ -55,6 +55,10 @@ Tailwind v4 is configured CSS-first in `src/styles/globals.css` under `@theme in
 
 `components.json` (shadcn) points its aliases at `@/components` and `@/lib/utils`, which do not exist. The class helper is `cn` in `src/utils/cn.ts`. Fix the aliases before running the shadcn CLI, or it will generate files in the wrong place.
 
+### Images
+
+Bitmap logos (the BoxBoy logo via `BrandLogo`, and the partner logos in `PartnerChip`) are PNG files in `src/modules/common/images`, imported statically and rendered with `next/image`. Never embed images as base64 inside components: they are serialised into the HTML, and Googlebot reads only the first 2 MB of each page. Before this rule the home was 10.8 MB of HTML and its text started after 4.7 MB, so Google did not index it. `LogoIcon` in `icons/index.tsx` is the small vector mark.
+
 ### Data visualisations
 
 The charts on the landing page are hand-written SVG components in `feature-viz/` and `benefits-viz/`. `data/features.ts` binds each feature card to its `Viz` component and icon (see the `Feature` type in `types.ts`), so adding a card means adding a viz component and one entry there.
@@ -76,7 +80,6 @@ The charts on the landing page are hand-written SVG components in `feature-viz/`
 ### Things that look wired but are not
 
 - `src/shared/messages/{pt,en,es,fr}.json` are not imported anywhere. The site is Portuguese-only with hardcoded copy; there is no i18n routing.
-- `src/modules/common/icons/BoxBoyLogo.tsx` is a 4.7 MB file with the logo embedded as base64. Do not open it or include it in searches. `LogoIcon` in `icons/index.tsx` is the small vector mark.
 - `public/assets/boxboy-logo.png` and `.svg` are about 4.5 MB each. Use the derived `icon-192.png`, `icon-512.png` and `apple-touch-icon.png` for anything served to visitors.
 
 ## Environment

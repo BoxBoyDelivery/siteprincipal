@@ -1,26 +1,29 @@
 import type { JSX } from 'react'
 
+import Image, { type StaticImageData } from 'next/image'
+
 import { cn } from '@/utils/cn'
-import {
-  ChinaInBoxIcon,
-  ClubeVerdeIcon,
-  DominosPizzaIcon,
-  KoniIcon,
-  LaMoleIcon,
-  LosGuacamolesIcon,
-  SpoletoIcon,
-} from '@/modules/common/icons'
+import { DominosPizzaIcon, LosGuacamolesIcon, SpoletoIcon } from '@/modules/common/icons'
+import { chinaInBox, clubeVerde, koni, laMole } from '@/modules/common/images'
 import type { IconComponent, PartnerSlot } from '@/modules/common/types'
 
+/** Logos vetoriais, desenhados como SVG inline. */
 const partnerLogos: Record<string, IconComponent> = {
-  ChinaInBoxIcon,
-  ClubeVerdeIcon,
   DominosPizzaIcon,
-  KoniIcon,
-  LaMoleIcon,
   LosGuacamolesIcon,
   SpoletoIcon,
 }
+
+/** Logos em bitmap, servidos como arquivo pelo `next/image` (nunca em base64 no HTML). */
+const partnerImages: Record<string, StaticImageData> = {
+  ChinaInBoxIcon: chinaInBox,
+  ClubeVerdeIcon: clubeVerde,
+  KoniIcon: koni,
+  LaMoleIcon: laMole,
+}
+
+const LOGO_CLASS =
+  'text-ink h-auto max-h-10 w-auto max-w-32 opacity-65 grayscale transition duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0'
 
 interface PartnerChipProps {
   slot: PartnerSlot
@@ -28,6 +31,7 @@ interface PartnerChipProps {
 
 const PartnerChip = ({ slot }: PartnerChipProps): JSX.Element => {
   const Logo = partnerLogos[slot.id]
+  const image = partnerImages[slot.id]
 
   return (
     <div
@@ -38,15 +42,15 @@ const PartnerChip = ({ slot }: PartnerChipProps): JSX.Element => {
         slot.chipClassName
       )}
     >
-      {Logo ? (
-        <Logo
-          role="img"
-          aria-label={slot.label}
-          className={cn(
-            'text-ink h-auto max-h-10 w-auto max-w-32 opacity-65 grayscale transition duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0',
-            slot.iconClassName
-          )}
+      {image ? (
+        <Image
+          src={image}
+          alt={slot.label}
+          sizes="192px"
+          className={cn(LOGO_CLASS, slot.iconClassName)}
         />
+      ) : Logo ? (
+        <Logo role="img" aria-label={slot.label} className={cn(LOGO_CLASS, slot.iconClassName)} />
       ) : (
         <span className="font-display text-ink text-[15px] leading-none font-bold tracking-tight">
           {slot.label}
